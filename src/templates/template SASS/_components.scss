@@ -1,0 +1,232 @@
+/* COMPONENT STYLES */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  ul {
+    background-color: var(--darkBlue);
+    position: fixed;
+    top: 6em;
+    right: 10%;
+    text-align: center;
+    padding: 1em 3em;
+    opacity: 0;
+    transform: translateX(150%);
+    transition: all 0.3s ease;
+    &.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    li {
+      margin: 1em;
+      a {
+        color: var(--lightGrey);
+        position: relative;
+        &::after {
+          content: "";
+          background-color: var(--lightGrey);
+          position: absolute;
+          left: 0;
+          bottom: -2em;
+          height: 2px;
+          width: 100%;
+          opacity: 0;
+          transition: all 0.3s ease;
+        }
+        &:hover::after {
+          transform: translateY(-1.5em);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+main .hero-header h1 {
+  margin-bottom: 1em;
+}
+
+main .hero img {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+main .about-section img {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+main article .portfolio-item img {
+  margin-bottom: 2em;
+}
+
+main article .about-section .about-content {
+  padding: 2em 0 4em 0;
+  border-top: solid 1px var(--grey);
+  border-bottom: solid 1px var(--grey);
+}
+
+main article .portfolio-item .portfolio-item-content {
+  border-top: solid 1px var(--grey);
+  border-bottom: solid 1px var(--grey);
+}
+
+.portfolio-item-content p {
+  margin-bottom: 2em;
+}
+
+.work-together h3 {
+  margin-bottom: 1em;
+}
+
+.work-together hr {
+  display: none;
+}
+
+footer .social-nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+footer .social-nav ul li + li {
+  padding-left: 1em;
+}
+
+footer .social-nav a svg path,
+footer nav svg path {
+  fill: var(--lightGrey);
+}
+
+/* primary button styles */
+.primary-btn {
+  color: var(--lightGrey);
+  background: var(--blue);
+  z-index: 1;
+  position: relative;
+  width: 50%;
+  max-width: 20em;
+  height: 4em;
+  display: grid;
+  grid-template-columns: 25% auto;
+  align-items: center;
+  padding: 0;
+}
+
+.primary-btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0.2;
+}
+
+.primary-btn:hover,
+.primary-btn:hover svg g {
+  background: var(--cyan);
+  color: var(--lightGrey);
+  cursor: pointer;
+  stroke: var(--lightGrey);
+}
+
+/* disabled primary button styles */
+.primary-btn:disabled,
+.primary-btn:disabled svg g {
+  background: var(--grey);
+  stroke: white;
+  cursor: auto;
+  color: white;
+}
+
+.primary-btn:disabled::before {
+  background: var(--black);
+  opacity: 0.1;
+}
+
+/* secondary button styles */
+.secondary-btn {
+  appearance: none;
+  background: var(--lightGrey);
+  border: var(--darkBlue) 1px solid;
+  color: var(--darkBlue);
+  padding: 20px 40px;
+}
+
+.secondary-btn:hover {
+  background: var(--darkBlue);
+  color: var(--lightGrey);
+  cursor: pointer;
+}
+
+/* secondary button disabled styles */
+.secondary-btn:disabled,
+.secondary-btn[disabled] {
+  opacity: 0.3;
+}
+
+@media (min-width: 768px) {
+  .top-nav button {
+    display: none;
+  }
+
+  .top-nav ul {
+    display: flex;
+    list-style-type: none;
+    position: static;
+    transform: none;
+    opacity: 1;
+    background: none;
+    position: static;
+    padding: 0;
+  }
+
+  .top-nav ul li {
+    margin: 0 1em;
+  }
+
+  .top-nav ul li:last-child {
+    margin-right: 0;
+  }
+
+  .top-nav ul li a {
+    color: var(--darkBlue);
+  }
+
+  .top-nav ul li a:hover {
+    color: var(--cyan);
+  }
+
+  .top-nav ul li a::after {
+    content: "";
+    background-color: var(--cyan);
+  }
+
+  main .hero {
+    position: relative;
+  }
+
+  main .hero-header {
+    position: absolute;
+    padding: 2em;
+    background-color: var(--lightGrey);
+    bottom: 0;
+    left: 0;
+    width: 80%;
+  }
+}

@@ -1,0 +1,15 @@
+/* OBJECT STYLES */
+.work-together {
+  text-align: center;
+}
+
+main {
+  .hero,
+  article {
+    margin-bottom: 6.25em;
+    .portfolio-item .portfolio-item-content {
+      padding: 2em 0;
+      margin-bottom: 2em;
+    }
+  }
+}
