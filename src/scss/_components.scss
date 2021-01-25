@@ -14,7 +14,7 @@
     &.hide {
       display: none;
     }
-  }
+  }}
   ul {
     background-color: var(--darkBlue);
     position: fixed;
@@ -52,7 +52,7 @@
       }
     }
   }
-}
+
 
 main .hero-header h1 {
   margin-bottom: 1em;
