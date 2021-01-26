@@ -1,14 +1,10 @@
 import styled from 'styled-components'
 
 export const HomeHeroStyled = styled.section`
-	
+	margin-bottom: 10rem;
 	img {
 		width: 100%;
 		margin-bottom: 2rem;
-	}
-
-	h1 {
-		margin-bottom: 3rem;
 	}
 
 	@media (min-width: 768px) {
@@ -36,6 +32,7 @@ export const PrimaryBtnStyled = styled.button`
 	grid-template-columns: 25% auto;
 	align-items: center;
 	padding: 0;
+	margin-top: 3rem;
 	&::before {
 		content: '';
 		position: absolute;

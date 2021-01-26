@@ -1,18 +1,7 @@
 
 
-
-main .hero-header h1 {
-  margin-bottom: 1em;
-}
-
-main .hero img {
-  width: 100%;
-  margin-bottom: 1.5em;
-}
-
 main .about-section img {
-  width: 100%;
-  margin-bottom: 2em;
+  
 }
 
 main article .portfolio-item img {
@@ -76,55 +65,4 @@ footer nav svg path {
 .secondary-btn:disabled,
 .secondary-btn[disabled] {
   opacity: 0.3;
-}
-
-@media (min-width: 768px) {
-  .top-nav button {
-    display: none;
-  }
-
-  .top-nav ul {
-    display: flex;
-    list-style-type: none;
-    position: static;
-    transform: none;
-    opacity: 1;
-    background: none;
-    position: static;
-    padding: 0;
-  }
-
-  .top-nav ul li {
-    margin: 0 1em;
-  }
-
-  .top-nav ul li:last-child {
-    margin-right: 0;
-  }
-
-  .top-nav ul li a {
-    color: var(--darkBlue);
-  }
-
-  .top-nav ul li a:hover {
-    color: var(--cyan);
-  }
-
-  .top-nav ul li a::after {
-    content: "";
-    background-color: var(--cyan);
-  }
-
-  main .hero {
-    position: relative;
-  }
-
-  main .hero-header {
-    position: absolute;
-    padding: 2em;
-    background-color: var(--lightGrey);
-    bottom: 0;
-    left: 0;
-    width: 80%;
-  }
 }

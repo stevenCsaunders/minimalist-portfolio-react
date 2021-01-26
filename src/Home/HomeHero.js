@@ -1,5 +1,5 @@
 import { HomeHeroStyled, PrimaryBtnStyled } from '../Styled/HomeHeroStyled'
-import heroImg from '../data/images/homepage/desktop/image-homepage-hero.jpg'
+import heroImg from '../data/images/homepage/mobile/image-homepage-hero.jpg'
 
 const HomeHero = () => {
 	return (
