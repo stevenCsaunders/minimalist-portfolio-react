@@ -218,7 +218,7 @@ export const GlobalStyled = createGlobalStyle`
 
   /* positioning*/
   --containerPadding: 10%;
-  --headerHeight: 8rem;
+  --headerHeight: 9.75rem;
 
   /* color intentions */
   --background: var(--lightGrey);
@@ -230,7 +230,7 @@ export const GlobalStyled = createGlobalStyle`
   --headingFont: "Ibarra Real Nova", serif;
   --bodyFont: "Public Sans", sans-serif;
   --baseFontSize: 10px;
-  --textExtraLarge: 3.052rem;
+  --textExtraLarge: 3.9rem;
   --textLarge: 2.5rem;
   --textMedium: 2rem;
   --textRegular: 1.6rem;

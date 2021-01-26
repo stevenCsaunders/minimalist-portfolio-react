@@ -1,57 +1,4 @@
-/* COMPONENT STYLES */
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    &:focus {
-      outline: none;
-    }
-    &.hide {
-      display: none;
-    }
-  }}
-  ul {
-    background-color: var(--darkBlue);
-    position: fixed;
-    top: 6em;
-    right: 10%;
-    text-align: center;
-    padding: 1em 3em;
-    opacity: 0;
-    transform: translateX(150%);
-    transition: all 0.3s ease;
-    &.show {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    li {
-      margin: 1em;
-      a {
-        color: var(--lightGrey);
-        position: relative;
-        &::after {
-          content: "";
-          background-color: var(--lightGrey);
-          position: absolute;
-          left: 0;
-          bottom: -2em;
-          height: 2px;
-          width: 100%;
-          opacity: 0;
-          transition: all 0.3s ease;
-        }
-        &:hover::after {
-          transform: translateY(-1.5em);
-          opacity: 1;
-        }
-      }
-    }
-  }
+
 
 
 main .hero-header h1 {
@@ -108,55 +55,6 @@ footer .social-nav ul li + li {
 footer .social-nav a svg path,
 footer nav svg path {
   fill: var(--lightGrey);
-}
-
-/* primary button styles */
-.primary-btn {
-  color: var(--lightGrey);
-  background: var(--blue);
-  z-index: 1;
-  position: relative;
-  width: 50%;
-  max-width: 20em;
-  height: 4em;
-  display: grid;
-  grid-template-columns: 25% auto;
-  align-items: center;
-  padding: 0;
-}
-
-.primary-btn::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 25%;
-  height: 100%;
-  background: var(--black);
-  opacity: 0.2;
-}
-
-.primary-btn:hover,
-.primary-btn:hover svg g {
-  background: var(--cyan);
-  color: var(--lightGrey);
-  cursor: pointer;
-  stroke: var(--lightGrey);
-}
-
-/* disabled primary button styles */
-.primary-btn:disabled,
-.primary-btn:disabled svg g {
-  background: var(--grey);
-  stroke: white;
-  cursor: auto;
-  color: white;
-}
-
-.primary-btn:disabled::before {
-  background: var(--black);
-  opacity: 0.1;
 }
 
 /* secondary button styles */
