@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components'
 
 export const NormalizeStyled = createGlobalStyle`
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -9,7 +13,6 @@ html {
 
 body {
   margin: 0;
-  width: 100%;
 }
 
 main {
@@ -215,7 +218,7 @@ export const GlobalStyled = createGlobalStyle`
 
   /* positioning*/
   --containerPadding: 10%;
-  --headerHeight: 10rem;
+  --headerHeight: 8rem;
 
   /* color intentions */
   --background: var(--lightGrey);
@@ -227,16 +230,16 @@ export const GlobalStyled = createGlobalStyle`
   --headingFont: "Ibarra Real Nova", serif;
   --bodyFont: "Public Sans", sans-serif;
   --baseFontSize: 10px;
-  --h1: 3.125rem;
-  --h2: 2.5rem;
-  --h3: 2rem;
-  --h5: 1.5rem;
-  --h5: 1.25rem;
-  --textSmall: 0.75rem;
-} /* typography developed using type-scale.com */
+  --textExtraLarge: 3.052rem;
+  --textLarge: 2.5rem;
+  --textMedium: 2rem;
+  --textRegular: 1.6rem;
+  --textSmall: 1.25rem;
+  --textExtraSmall: 1rem;
+}
 
 html {
-  font-size: var(--baseFontSize); /*16px*/
+  font-size: var(--baseFontSize);
 }
 
 body {
@@ -246,4 +249,33 @@ body {
   line-height: 1.875;
   color: #333;
 }
-`;
+
+h1 {
+  font-size: var(--textExtraLarge)
+}
+h2 {
+  font-size: var(--textLarge)
+}
+h3 {
+  font-size: var(--textMedium)
+}
+h4 {
+  font-size: var(--textRegular)
+}
+h5 {
+  font-size: var(--textSmall)
+}
+h6 {
+  font-size: var (--textExtraSmall)
+}
+
+p{
+  font-size: var(--textRegular);
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+a {
+  text-decoration: none;
+}
+`

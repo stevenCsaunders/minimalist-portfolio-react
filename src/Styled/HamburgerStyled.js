@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HamburgerStyled = styled.div`
+
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -37,7 +38,7 @@ export const HamburgerStyled = styled.div`
   margin-top: -2px; }
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
     width: 30px;
-    height: 4px;
+    height: 2px;
     background-color: #000;
 
     position: absolute;
@@ -48,9 +49,9 @@ export const HamburgerStyled = styled.div`
     content: "";
     display: block; }
   .hamburger-inner::before {
-    top: -10px; }
+    top: -7px; }
   .hamburger-inner::after {
-    bottom: -10px; }
+    bottom: -7px; }
 
 .hamburger--squeeze .hamburger-inner {
   transition-duration: 0.075s;
@@ -72,4 +73,8 @@ export const HamburgerStyled = styled.div`
     bottom: 0;
     transform: rotate(-90deg);
     transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+    @media (min-width: 768px) {
+    display: none;
+  }
 `

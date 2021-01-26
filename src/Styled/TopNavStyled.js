@@ -5,30 +5,41 @@ export const TopNavStyled = styled.nav`
 	justify-content: space-between;
 	align-items: center;
 	overflow: hidden;
-  width: 100%;
-  height: var(--headerHeight);
+	width: 100%;
+	height: var(--headerHeight);
 `
 
 export const NavList = styled.ul`
-    background-color: var(--darkBlue);
-    position: fixed;
-    top: 6rem;
-    right: 10%;
-    text-align: center;
-    padding: 1rem 3rem;
-    opacity: 0;
-    transform: translateX(150%);
-    transition: all 0.3s ease;
+	background-color: var(--darkBlue);
+	position: fixed;
+	top: 6rem;
+	right: 10%;
+	text-align: center;
+	padding: 2rem 7rem;
+	opacity: 0;
+	transform: translateX(150%);
+	transition: all 0.3s ease;
 	${({ toggle }) =>
 		toggle &&
 		css`
 			opacity: 1;
 			transform: translateX(0);
 		`}
+
+	@media (min-width: 768px) {
+		display: flex;
+		list-style-type: none;
+		transform: none;
+		opacity: 1;
+		background: none;
+		position: static;
+		padding: 0;
+	}
 `
 
 export const NavItem = styled.li`
-	margin: 1rem;
+	margin: 2rem;
+	font-size: var(--textRegular);
 	a {
 		color: var(--lightGrey);
 		position: relative;
@@ -46,6 +57,23 @@ export const NavItem = styled.li`
 		&:hover::after {
 			transform: translateY(-1.5rem);
 			opacity: 1;
+		}
+	}
+
+	@media (min-width: 768px) {
+		margin: 0 1em;
+		&::last-child {
+			margin-right: 0;
+		}
+		a {
+			color: var(--darkBlue);
+			&:hover {
+				color: var(--cyan);
+			}
+			&::after {
+				content: '';
+				background-color: var(--cyan);
+			}
 		}
 	}
 `
