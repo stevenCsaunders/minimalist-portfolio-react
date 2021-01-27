@@ -1,4 +1,5 @@
 import profileImg from '../data/images/homepage/mobile/image-homepage-profile.jpg'
+import SecondaryBtn from '../shared/SecondaryBtn'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
 const AboutMe = () => {
 	return (
@@ -13,15 +14,11 @@ const AboutMe = () => {
 					JavaScript. When writing JavaScript code, I mostly use
 					React, but I can adapt to whatever tools are required. I’m
 					based in Syracuse, UT, but I’m happy working remotely and
-					have experience in remote teams. When I’m not coding, you’ll
-					find me outdoors shredding the gnar or looking for butter on
-					the lake. I love being out in nature whether that’s going
-					for a walk, run or cycling. I’d love you to check out my
+					have experience on remote teams. When I’m not coding, you’ll
+					find me outdoors shredding the gnar or hanging with the fam. Feel free to check out my
 					work.
 				</p>
-				<button className='secondary-btn' type='button'>
-					Go to Portfolio
-				</button>
+				<SecondaryBtn text={'go to portfolio'} />
 			</div>
 		</AboutMeStyled>
 	)
