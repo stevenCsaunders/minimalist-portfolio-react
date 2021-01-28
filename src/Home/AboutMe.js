@@ -1,5 +1,5 @@
 import profileImg from '../data/images/homepage/mobile/image-homepage-profile.jpg'
-import SecondaryBtn from '../shared/SecondaryBtn'
+import { SecondaryBtn } from '../shared'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
 const AboutMe = () => {
 	return (
@@ -15,8 +15,8 @@ const AboutMe = () => {
 					React, but I can adapt to whatever tools are required. I’m
 					based in Syracuse, UT, but I’m happy working remotely and
 					have experience on remote teams. When I’m not coding, you’ll
-					find me outdoors shredding the gnar or hanging with the fam. Feel free to check out my
-					work.
+					find me outdoors shredding the gnar or hanging with the fam.
+					Feel free to check out my work.
 				</p>
 				<SecondaryBtn text={'go to portfolio'} />
 			</div>

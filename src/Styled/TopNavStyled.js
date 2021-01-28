@@ -61,8 +61,8 @@ export const NavItem = styled.li`
 	}
 
 	@media (min-width: 768px) {
-		margin: 0 1em;
-		&::last-child {
+		margin: 0 2rem;
+		&:last-child {
 			margin-right: 0;
 		}
 		a {

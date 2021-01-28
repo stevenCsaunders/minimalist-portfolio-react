@@ -5,7 +5,7 @@ export const SecondaryBtnStyled = styled.button`
 	background: var(--lightGrey);
 	border: 1px solid var(--darkBlue);
 	color: var(--darkBlue);
-	padding: 20px 40px;
+	padding: 15px 40px;
 	letter-spacing: 1px;
 
 	&:hover {

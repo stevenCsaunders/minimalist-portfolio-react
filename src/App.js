@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import HomeMain from './Home/HomeMain'
-import Header from './shared/Header'
+import Home from './Home'
+import PortfolioItem from './Portfolio/PortfolioItem'
+import { Footer, Header } from './shared'
 import { GlobalStyled, NormalizeStyled } from './Styled/GlobalStyled'
 
 function App() {
@@ -13,9 +14,11 @@ function App() {
 			<NormalizeStyled />
 			<GlobalStyled />
 			<Header onClick={hamburgerHandler} toggle={hamburgerState} />
-			<HomeMain />
+			<Home />
+			<Footer />
+			<PortfolioItem />
 		</div>
 	)
 }
 
-export default App;
+export default App

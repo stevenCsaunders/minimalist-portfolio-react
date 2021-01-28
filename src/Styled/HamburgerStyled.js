@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const HamburgerStyled = styled.div`
 
 .hamburger {
-  padding: 15px 15px;
+  padding: 15px 0px;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;

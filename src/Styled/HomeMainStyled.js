@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HomeMainStyled = styled.main`
+export const MainStyled = styled.main`
 padding: calc(1em + var(--headerHeight)) var(--containerPadding);
   p {
     margin-bottom: 1.15rem;
@@ -15,8 +15,6 @@ padding: calc(1em + var(--headerHeight)) var(--containerPadding);
   h1,
   h2,
   h3 {
-    margin: 0;
-    padding: 0;
     font-family: var(--headingFont);
     font-weight: 400;
     line-height: 1.15;
@@ -57,7 +55,6 @@ padding: calc(1em + var(--headerHeight)) var(--containerPadding);
 
   button {
     text-transform: uppercase;
-    border: none;
     font-size: var(--textSmall);
     transition: background 0.3s ease;
   }

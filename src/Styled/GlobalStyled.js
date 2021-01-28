@@ -236,6 +236,10 @@ export const GlobalStyled = createGlobalStyle`
   --textRegular: 1.6rem;
   --textSmall: 1.25rem;
   --textExtraSmall: 1rem;
+
+  --textBold: 700;
+
+  --lightDivider: solid 1px var(--grey);
 }
 
 html {
