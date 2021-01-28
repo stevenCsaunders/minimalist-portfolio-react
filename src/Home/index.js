@@ -1,6 +1,6 @@
 import HomeHero from './HomeHero'
 import AboutMe from './AboutMe'
-import WorkWith from '../shared/WorkWith'
+import { WorkWith } from '../shared'
 import { MainStyled } from '../Styled/HomeMainStyled'
 
 export const Home = () => {
