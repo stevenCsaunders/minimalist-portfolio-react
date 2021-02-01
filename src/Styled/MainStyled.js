@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const MainStyled = styled.main`
 padding: calc(1em + var(--headerHeight)) var(--containerPadding);
   p {
-    margin-bottom: 1.15rem;
     max-width: 50em;
     a {
       color: var(--darkBlue);
@@ -16,16 +15,9 @@ padding: calc(1em + var(--headerHeight)) var(--containerPadding);
   h2,
   h3 {
     font-family: var(--headingFont);
-    font-weight: 400;
+    font-weight: var(--textBold);
     line-height: 1.15;
-  }
-
-  h1 {
-    font-weight: 700;
-  }
-
-  h2 {
-    font-weight: 700;
+    margin-top: 0;
   }
 
   small,
@@ -36,7 +28,7 @@ padding: calc(1em + var(--headerHeight)) var(--containerPadding);
   label {
     display: block;
     font-size: var(--textSmall);
-    font-weight: 700;
+    font-weight: var(--textBold);
   }
 
   input,

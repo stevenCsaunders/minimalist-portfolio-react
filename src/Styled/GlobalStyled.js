@@ -206,6 +206,7 @@ template {
 `
 
 export const GlobalStyled = createGlobalStyle`
+
 :root {
   /* base colors */
   --cyan: #5fb4a2;
@@ -237,7 +238,7 @@ export const GlobalStyled = createGlobalStyle`
   --textSmall: 1.25rem;
   --textExtraSmall: 1rem;
 
-  --textBold: 700;
+  --textBold: 500;
 
   --lightDivider: solid 1px var(--grey);
 }

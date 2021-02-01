@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Home from './Home'
-import PortfolioItem from './Portfolio/PortfolioItem'
-import { Footer, Header } from './shared'
+import Portfolio from './Portfolio'
+import Project from './Project'
+import { Footer, Header, WorkWith } from './shared'
 import { GlobalStyled, NormalizeStyled } from './Styled/GlobalStyled'
+import { MainStyled } from './Styled/MainStyled'
+
 
 function App() {
 	const [hamburgerState, setHamburgerState] = useState(false)
@@ -14,9 +17,13 @@ function App() {
 			<NormalizeStyled />
 			<GlobalStyled />
 			<Header onClick={hamburgerHandler} toggle={hamburgerState} />
-			<Home />
+			<MainStyled>
+				<Project />
+				{/* <Portfolio /> */}
+				{/* <Home /> */}
+				<WorkWith />
+			</MainStyled>
 			<Footer />
-			<PortfolioItem />
 		</div>
 	)
 }
