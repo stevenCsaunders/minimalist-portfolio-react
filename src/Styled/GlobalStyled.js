@@ -232,8 +232,8 @@ export const GlobalStyled = createGlobalStyle`
   --bodyFont: "Public Sans", sans-serif;
   --baseFontSize: 10px;
   --textExtraLarge: 3.9rem;
-  --textLarge: 2.5rem;
-  --textMedium: 2rem;
+  --textLarge: 3.25rem;
+  --textMedium: 2.5rem;
   --textRegular: 1.6rem;
   --textSmall: 1.25rem;
   --textExtraSmall: 1rem;
