@@ -8,11 +8,7 @@ import ProjectNav from './ProjectNav'
 const Project = () => {
 	return (
 		<ProjectStyled>
-			<img
-				className='project-hero'
-				src={manageHero}
-				alt='manage hero'
-			/>
+			<img className='project-hero' src={manageHero} alt='manage hero' />
 			<article>
 				<aside>
 					<h2>Manage</h2>
@@ -22,9 +18,13 @@ const Project = () => {
 						along with CSS Grid and JavaScript for the areas that
 						required interactivity, such as the testimonial slider.
 					</p>
-					<p>Interaction Design / Front End Development</p>
-					<p>HTML / CSS / JS</p>
-					<SecondaryBtn text="visit website" />
+					<div className='tech'>
+						<p>
+							Interaction Design / Front End Development
+						</p>
+						<p>HTML / CSS / JS</p>
+					</div>
+					<SecondaryBtn text='visit website' />
 				</aside>
 				<section>
 					<h3>Project Background</h3>
@@ -41,14 +41,8 @@ const Project = () => {
 					</p>
 					<div>
 						<h3>Project Preview</h3>
-						<img
-							src={managePreview1}
-							alt='manage preview 1'
-						/>
-						<img
-							src={managePreview2}
-							alt='manage preview 2'
-						/>
+						<img src={managePreview1} alt='manage preview 1' />
+						<img src={managePreview2} alt='manage preview 2' />
 					</div>
 				</section>
 			</article>

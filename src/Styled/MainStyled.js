@@ -22,6 +22,11 @@ export const MainStyled = styled.main`
 		margin-top: 0;
 	}
 
+	h2 {
+			font-size: var(--textExtraLarge);
+			margin-bottom: 2rem;
+		}
+
 	small,
 	.text_small {
 		font-size: var(--textSmall);

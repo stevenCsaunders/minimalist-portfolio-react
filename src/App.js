@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Home from './Home'
+// import Home from './Home'
 import Portfolio from './Portfolio'
 import Project from './Project'
 import { Footer, Header, WorkWith } from './shared'
@@ -19,7 +19,7 @@ function App() {
 			<Header onClick={hamburgerHandler} toggle={hamburgerState} />
 			<MainStyled>
 				<Project />
-				{/* <Portfolio /> */}
+				<Portfolio />
 				{/* <Home /> */}
 				<WorkWith />
 			</MainStyled>

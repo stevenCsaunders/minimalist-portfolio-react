@@ -5,7 +5,18 @@ export const ProjectStyled = styled.div`
 		aside {
 			border-top: var(--lightDivider);
 			border-bottom: var(--lightDivider);
-			padding: 2rem 0;
+			padding: 3rem 0;
+			margin-bottom: 6rem;
+			p {
+				margin-bottom: 4rem;
+			}
+			.tech {
+				color: var(--cyan);
+				margin-bottom: 3rem;
+				p {
+					margin: 0;
+				}
+			}
 		}
 	}
 `

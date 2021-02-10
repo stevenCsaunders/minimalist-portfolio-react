@@ -11,10 +11,7 @@ margin-bottom: 4rem;
     border-bottom: solid 1px var(--grey);
     padding: 3rem 0;
 
-		h2 {
-			font-size: var(--textExtraLarge);
-			margin-bottom: 2rem;
-		}
+
 		p {
 			margin-bottom: 5rem;
 		}
