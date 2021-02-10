@@ -1,9 +1,13 @@
-import Header from '../shared/Header'
+import HomeHero from './HomeHero'
+import AboutMe from './AboutMe'
 
-const Home = () => {
-  return(
-    <Header />
-  );
+export const Home = () => {
+	return (
+		<>
+			<HomeHero />
+			<AboutMe />
+		</>
+	)
 }
 
-export default Home;
+export default Home
