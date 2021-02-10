@@ -206,6 +206,7 @@ template {
 `
 
 export const GlobalStyled = createGlobalStyle`
+
 :root {
   /* base colors */
   --cyan: #5fb4a2;
@@ -231,13 +232,13 @@ export const GlobalStyled = createGlobalStyle`
   --bodyFont: "Public Sans", sans-serif;
   --baseFontSize: 10px;
   --textExtraLarge: 3.9rem;
-  --textLarge: 2.5rem;
-  --textMedium: 2rem;
+  --textLarge: 3.25rem;
+  --textMedium: 2.5rem;
   --textRegular: 1.6rem;
   --textSmall: 1.25rem;
   --textExtraSmall: 1rem;
 
-  --textBold: 700;
+  --textBold: 500;
 
   --lightDivider: solid 1px var(--grey);
 }
@@ -254,23 +255,20 @@ body {
   color: #333;
 }
 
-h1 {
+h1, h2 {
   font-size: var(--textExtraLarge)
 }
-h2 {
+h3 {
   font-size: var(--textLarge)
 }
-h3 {
+h4 {
   font-size: var(--textMedium)
 }
-h4 {
+h5 {
   font-size: var(--textRegular)
 }
-h5 {
-  font-size: var(--textSmall)
-}
 h6 {
-  font-size: var (--textExtraSmall)
+  font-size: var(--textSmall)
 }
 
 p{

@@ -9,9 +9,8 @@ const PortfolioItem = () => {
 				src={manage}
 				alt='manage preview'
 			/>
-			<div className='portfolio-content-wrapper'>
 				<div className='portfolio-item-content'>
-					<h3>Manage</h3>
+					<h2>Manage</h2>
 					<p>
 						This project required me to build a fully responsive
 						landing page to the designs provided. I used HTML5,
@@ -20,7 +19,6 @@ const PortfolioItem = () => {
 					</p>
 					<SecondaryBtn text={'view project'} />
 				</div>
-			</div>
 		</PortfolioItemStyled>
 	)
 }
