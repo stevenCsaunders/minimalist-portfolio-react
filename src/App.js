@@ -19,7 +19,7 @@ function App() {
 			<Header onClick={hamburgerHandler} toggle={hamburgerState} />
 			<MainStyled>
 				<Project />
-				<Portfolio />
+				{/* <Portfolio /> */}
 				{/* <Home /> */}
 				<WorkWith />
 			</MainStyled>

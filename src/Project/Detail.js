@@ -39,7 +39,7 @@ const Project = () => {
 						something new with each project, helping me to improve
 						and adapt my style.
 					</p>
-					<div>
+					<div className="project-preview">
 						<h3>Project Preview</h3>
 						<img src={managePreview1} alt='manage preview 1' />
 						<img src={managePreview2} alt='manage preview 2' />

@@ -255,23 +255,20 @@ body {
   color: #333;
 }
 
-h1 {
+h1, h2 {
   font-size: var(--textExtraLarge)
 }
-h2 {
+h3 {
   font-size: var(--textLarge)
 }
-h3 {
+h4 {
   font-size: var(--textMedium)
 }
-h4 {
+h5 {
   font-size: var(--textRegular)
 }
-h5 {
-  font-size: var(--textSmall)
-}
 h6 {
-  font-size: var (--textExtraSmall)
+  font-size: var(--textSmall)
 }
 
 p{
