@@ -1,20 +1,21 @@
 import Logo from './Logo'
 import Hamburger from './Hamburger'
 import { TopNavStyled, NavItem, NavList } from '../Styled/TopNavStyled'
+import { NavLink } from 'react-router-dom'
 
-const TopNav = ( { toggle, onClick}) => {
+const TopNav = ({ toggle, onClick }) => {
 	return (
 		<TopNavStyled>
 			<Logo />
 			<NavList toggle={toggle}>
 				<NavItem>
-					<a href='/index.html'>Home</a>
+					<NavLink to='/'>Home</NavLink>
 				</NavItem>
 				<NavItem>
-					<a href='/portfolio.html'>Portfolio</a>
+					<NavLink to='/portfolio'>Portfolio</NavLink>
 				</NavItem>
 				<NavItem>
-					<a href='/contact.html'>Contact Me</a>
+					<NavLink to='/contact'>Contact Me</NavLink>
 				</NavItem>
 			</NavList>
 			<Hamburger toggle={toggle} onClick={onClick} />
@@ -22,4 +23,4 @@ const TopNav = ( { toggle, onClick}) => {
 	)
 }
 
-export default TopNav;
+export default TopNav
