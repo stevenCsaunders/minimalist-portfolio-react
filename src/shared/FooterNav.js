@@ -1,4 +1,5 @@
 import { FooterNavStyled } from '../Styled/FooterStyled'
+import { NavLink } from 'react-router-dom';
 
 const FooterNav = () => {
 	return (
@@ -21,15 +22,13 @@ const FooterNav = () => {
 			</a>
 			<ul>
 				<li>
-					<a href='/'>Home</a>
+					<NavLink to='/'>Home</NavLink>
 				</li>
 				<li>
-					{' '}
-					<a href='/portfolio'>Portfolio</a>
+					<NavLink to='/portfolio'>Portfolio</NavLink>
 				</li>
 				<li>
-					{' '}
-					<a href='/contact'>Contact Me</a>
+					<NavLink to='/contact'>Contact Me</NavLink>
 				</li>
 			</ul>
 		</FooterNavStyled>
