@@ -2,7 +2,9 @@ import SecondaryBtn from '../shared/SecondaryBtn'
 import { PortfolioItemStyled } from '../Styled/PortfolioItemStyled'
 import manage from '../data/images/portfolio/mobile/image-portfolio-manage.jpg'
 
+
 const PortfolioItem = () => {
+
 	return (
 		<PortfolioItemStyled>
 			<img
