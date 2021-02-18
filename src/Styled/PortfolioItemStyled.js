@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PortfolioItemStyled = styled.section`
-margin-bottom: 4rem;
+margin-bottom: 6rem;
   img {
      width: 100%;
      margin-bottom: 2rem; 

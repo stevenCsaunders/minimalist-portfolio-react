@@ -19,7 +19,6 @@ const FooterNavStyled = styled.nav`
 		text-align: center;
 		padding: 0;
 		margin: 0;
-		list-style-type: none;
 		li + li {
 			margin-top: 2.5rem;
 		}
@@ -43,7 +42,6 @@ const FooterSocialStyled = styled.div`
 
 ul {
 		display: flex;
-		list-style-type: none;
 		padding: 0;
 	}
 ul li + li {
