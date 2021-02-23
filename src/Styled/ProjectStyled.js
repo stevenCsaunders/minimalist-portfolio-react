@@ -2,8 +2,10 @@ import styled from 'styled-components'
 
 export const ProjectStyled = styled.div`
 	.project-hero {
+		img {
 		width: 100%;
 		margin-bottom: 4rem;
+		}
 	}
 	article {
 		aside {

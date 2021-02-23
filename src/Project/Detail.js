@@ -1,14 +1,27 @@
 import SecondaryBtn from '../shared/SecondaryBtn'
 import { ProjectStyled } from '../Styled/ProjectStyled'
-import manageHero from '../data/images/detail/mobile/image-manage-hero.jpg'
-import managePreview1 from '../data/images/detail/mobile/image-manage-preview-1.jpg'
-import managePreview2 from '../data/images/detail/mobile/image-manage-preview-2.jpg'
+import managePreviewSml from '../data/images/detail/mobile/image-manage-preview-1.jpg'
+import managePreview1Med from '../data/images/detail/tablet/image-manage-preview-1.jpg'
+import managePreview1Lrg from '../data/images/detail/desktop/image-manage-preview-1.jpg'
+import managePreview2Sml from '../data/images/detail/mobile/image-manage-preview-2.jpg'
+import managePreview2Med from '../data/images/detail/tablet/image-manage-preview-2.jpg'
+import managePreview2Lrg from '../data/images/detail/desktop/image-manage-preview-2.jpg'
 import ProjectNav from './ProjectNav'
+import { tablet, desktop } from '../shared/MediaQueries'
+import manageSml from '../data/images/detail/mobile/image-manage-hero.jpg'
+import manageMed from '../data/images/detail/tablet/image-manage-hero.jpg'
+import manageLrg from '../data/images/detail/desktop/image-manage-hero.jpg'
 
 const Project = () => {
 	return (
 		<ProjectStyled>
-			<img className='project-hero' src={manageHero} alt='manage hero' />
+			<div className='project-hero'>
+				<picture>
+					<source srcset={manageLrg} media={desktop} />
+					<source srcset={manageMed} media={tablet} />
+					<img src={manageSml} alt='manage screenshot' />
+				</picture>
+			</div>
 			<article>
 				<aside>
 					<h2>Manage</h2>
@@ -19,9 +32,7 @@ const Project = () => {
 						required interactivity, such as the testimonial slider.
 					</p>
 					<div className='tech'>
-						<p>
-							Interaction Design / Front End Development
-						</p>
+						<p>Interaction Design / Front End Development</p>
 						<p>HTML / CSS / JS</p>
 					</div>
 					<SecondaryBtn text='visit website' />
@@ -39,10 +50,30 @@ const Project = () => {
 						something new with each project, helping me to improve
 						and adapt my style.
 					</p>
-					<div className="project-preview">
+					<div className='project-preview'>
 						<h3>Project Preview</h3>
-						<img src={managePreview1} alt='manage preview 1' />
-						<img src={managePreview2} alt='manage preview 2' />
+						<picture>
+							<source
+								srcset={managePreview1Lrg}
+								media={desktop}
+							/>
+							<source srcset={managePreview1Med} media={tablet} />
+							<img
+								src={managePreviewSml}
+								alt='manage screenshot'
+							/>
+						</picture>
+						<picture>
+							<source
+								srcset={managePreview2Lrg}
+								media={desktop}
+							/>
+							<source srcset={managePreview2Med} media={tablet} />
+							<img
+								src={managePreview2Sml}
+								alt='manage screenshot two'
+							/>
+						</picture>
 					</div>
 				</section>
 			</article>

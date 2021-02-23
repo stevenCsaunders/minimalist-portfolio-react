@@ -10,8 +10,6 @@ margin-bottom: 6rem;
 		border-top: solid 1px var(--grey);
     border-bottom: solid 1px var(--grey);
     padding: 3rem 0;
-
-
 		p {
 			margin-bottom: 5rem;
 		}
