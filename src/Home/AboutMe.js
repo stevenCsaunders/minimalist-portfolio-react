@@ -1,10 +1,17 @@
-import profileImg from '../data/images/homepage/mobile/image-homepage-profile.jpg'
 import { SecondaryBtn } from '../shared'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
+import { tablet, desktop } from '../shared/MediaQueries'
+import profileSml from '../data/images/homepage/mobile/image-homepage-profile.jpg'
+import profileMed from '../data/images/homepage/tablet/image-homepage-profile.jpg'
+import profileLrg from '../data/images/homepage/desktop/image-homepage-profile.jpg'
 const AboutMe = () => {
 	return (
 		<AboutMeStyled>
-			<img src={profileImg} alt='Headshot' />
+			<picture>
+				<source srcset={profileLrg} media={desktop} />
+				<source srcset={profileMed} media={tablet} />
+				<img src={profileSml} alt='headshot' />
+			</picture>
 			<div className='about-content'>
 				<h2>About Me</h2>
 				<p>

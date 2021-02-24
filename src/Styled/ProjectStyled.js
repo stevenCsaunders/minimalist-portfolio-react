@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 
 export const ProjectStyled = styled.div`
+	.project-hero {
+		img {
+		width: 100%;
+		margin-bottom: 4rem;
+		}
+	}
 	article {
 		aside {
 			border-top: var(--lightDivider);
@@ -23,9 +29,13 @@ export const ProjectStyled = styled.div`
 		p {
 			margin-bottom: 6rem;
 		}
-		.project-preview img{
-					width: 100%;
-				}
+		.project-preview {
+			margin-bottom: 3rem;
+			img {
+				width: 100%;
+				margin-bottom: 3rem;
+			}
+		}
 	}
 `
 
@@ -40,11 +50,15 @@ export const ProjectNavStyled = styled.section`
 		border-left: var(--lightDivider);
 		width: 50%;
 	}
+	a {
+		text-decoration: none;
+		color: var(--darkBlue);
+	}
 	img {
 		margin: 2rem 0;
 	}
 	h4 {
-		font-size: var(--textLarge);
+		font-size: var(--textMedium);
 		margin: 0 0 0.5rem 0;
 	}
 	p {

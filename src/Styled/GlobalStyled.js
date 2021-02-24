@@ -271,6 +271,12 @@ h6 {
   font-size: var(--textSmall)
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 p{
   font-size: var(--textRegular);
   font-weight: 400;

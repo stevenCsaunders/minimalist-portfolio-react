@@ -37,7 +37,7 @@ export const MainStyled = styled.main`
 	textarea {
 		background: var(--grey);
 		border: none;
-		padding: 20px;
+		padding: 1.5rem;
 		&:focus {
 			outline: 1px solid var(--cyan);
 		}

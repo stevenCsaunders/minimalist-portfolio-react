@@ -28,7 +28,6 @@ export const NavList = styled.ul`
 
 	@media (min-width: 768px) {
 		display: flex;
-		list-style-type: none;
 		transform: none;
 		opacity: 1;
 		background: none;

@@ -1,16 +1,20 @@
 import SecondaryBtn from '../shared/SecondaryBtn'
 import { PortfolioItemStyled } from '../Styled/PortfolioItemStyled'
-import manage from '../data/images/portfolio/mobile/image-portfolio-manage.jpg'
+import { tablet, desktop } from '../shared/MediaQueries'
+import manageSml from '../data/images/portfolio/mobile/image-portfolio-manage.jpg'
+import manageMed from '../data/images/portfolio/tablet/image-portfolio-manage.jpg'
+import manageLrg from '../data/images/portfolio/desktop/image-portfolio-manage.jpg'
 
 
 const PortfolioItem = () => {
 
 	return (
 		<PortfolioItemStyled>
-			<img
-				src={manage}
-				alt='manage preview'
-			/>
+			<picture>
+				<source srcset={manageLrg} media={desktop} />
+				<source srcset={manageMed} media={tablet} />
+				<img src={manageSml} alt='manage screenshot' />
+			</picture>
 				<div className='portfolio-item-content'>
 					<h2>Manage</h2>
 					<p>

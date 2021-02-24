@@ -17,6 +17,10 @@ export const HomeHeroStyled = styled.section`
 			left: 0;
 			width: 80%;
 		}
+		@media (min-width: 1100px) {
+		.hero-header {
+			width: 40%;
+		}
+	}
 	}
 `
-

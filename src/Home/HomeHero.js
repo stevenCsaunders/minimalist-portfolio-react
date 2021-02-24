@@ -1,19 +1,23 @@
 import { HomeHeroStyled } from '../Styled/HomeHeroStyled'
 import { PrimaryBtn } from '../shared'
-import heroImg from '../data/images/homepage/mobile/image-homepage-hero.jpg'
+import { tablet, desktop } from '../shared/MediaQueries'
+import heroSml from '../data/images/homepage/mobile/image-homepage-hero.jpg'
+import heroMed from '../data/images/homepage/tablet/image-homepage-hero.jpg'
+import heroLrg from '../data/images/homepage/desktop/image-homepage-hero.jpg'
 
 const HomeHero = () => {
 	return (
 		<HomeHeroStyled>
-			<img
-				src={heroImg}
-				alt='homepage hero'
-			/>
+			<picture>
+				<source srcset={heroLrg} media={desktop} />
+				<source srcset={heroMed} media={tablet} />
+				<img src={heroSml} alt='computer monitor on desk' />
+			</picture>
 			<div className='hero-header'>
 				<h1>
-				Hey, I’m Alex Spencer and I love building beautiful websites
+					Hey, I’m Alex Spencer and I love building beautiful websites
 				</h1>
-			<PrimaryBtn />
+				<PrimaryBtn />
 			</div>
 		</HomeHeroStyled>
 	)
