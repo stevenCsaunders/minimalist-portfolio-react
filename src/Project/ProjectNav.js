@@ -6,22 +6,26 @@ import RightArrow from '../data/images/icons/arrow-right.svg'
 const ProjectNav = () => {
 	return (
 		<ProjectNavStyled>
-			<div>
-			<NavLink to="/">
-			<img src={LeftArrow} alt= 'next project arrow' />
-				<h4>Fylo</h4>
-				<p>Previous Project</p>
-			</NavLink>
+			<div className='previous'>
+				<NavLink className="previous-arrow" to='/'>
+					<img src={LeftArrow} alt='next project arrow' />
+					<div>
+						<h4>Fylo</h4>
+						<p>Previous Project</p>
+					</div>
+				</NavLink>
 			</div>
-			<div>
-      <NavLink to="/">
-      	<img src={RightArrow} alt='previous project arrow' />
-					<h4>Bookmark</h4>
-					<p>Next Project</p>
-      </NavLink>
+			<div className='next'>
+				<NavLink className="next-arrow" to='/'>
+					<img src={RightArrow} alt='previous project arrow' />
+					<div>
+						<h4>Bookmark</h4>
+						<p>Next Project</p>
+					</div>
+				</NavLink>
 			</div>
 		</ProjectNavStyled>
 	)
 }
 
-export default ProjectNav;
+export default ProjectNav

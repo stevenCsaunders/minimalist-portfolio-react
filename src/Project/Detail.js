@@ -37,7 +37,7 @@ const Project = () => {
 					</div>
 					<SecondaryBtn text='visit website' />
 				</aside>
-				<section>
+				<section className="project-background">
 					<h3>Project Background</h3>
 					<p>
 						This project was a front-end challenge from Frontend
