@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const MainStyled = styled.main`
 	padding: calc(1em + var(--headerHeight)) var(--containerPadding);
 	p {
-		max-width: 50em;
+		max-width: 75rem;
 		a {
 			color: var(--darkBlue);
 			text-decoration: none;
