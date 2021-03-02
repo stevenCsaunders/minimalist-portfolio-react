@@ -7,7 +7,7 @@ const FooterStyled = styled.footer`
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 3em var(--containerPadding);
+	padding: 2.5rem var(--containerPadding);
 	@media (min-width: 768px) {
 		flex-direction: row;
 		justify-content: space-between

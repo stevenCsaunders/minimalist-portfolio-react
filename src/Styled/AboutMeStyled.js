@@ -18,4 +18,25 @@ export const AboutMeStyled = styled.section`
 			margin-bottom: 2rem;
 		}
 	}
+	@media (min-width: 768px) {
+		display: flex;
+		gap: 8rem;
+		margin-bottom: 10rem;
+		img, .about-content {
+			margin: 0;
+		}
+		.about-content {
+		width: 60%;
+		}
+		img {
+			height: 100%;
+			width : 100%;
+		}
+	}
+	@media (min-width: 1100px) {
+		gap: 10rem;
+		img {
+			margin: 0;
+		}
+	}
 `

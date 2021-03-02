@@ -14,9 +14,9 @@ export const WorkWithStyled = styled.section`
 	}
 	@media (min-width: 768px) {
 		display: grid;
-		grid-template-columns: 1fr 1.25fr auto;
+		grid-template-columns: 1fr .5fr auto;
 		align-items: center;
-		gap: 2em;
+		gap: 3em;
 		text-align: left;
     h3 {
       margin: 0;
@@ -29,5 +29,9 @@ export const WorkWithStyled = styled.section`
 			margin: 0;
 			width: 100%;
 		}
+	}
+	@media (min-width: 1100px) {
+		grid-template-columns: 1fr 1fr auto;
+
 	}
 `
