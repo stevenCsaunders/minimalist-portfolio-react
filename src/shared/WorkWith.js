@@ -1,4 +1,4 @@
-import SecondaryBtn from './SecondaryBtn'
+import { SecondaryBtn } from './SecondaryBtn'
 import { WorkWithStyled } from '../Styled/WorkWithStyled'
 
 const WorkWith = () => {

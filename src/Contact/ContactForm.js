@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import SecondaryBtn from '../shared/SecondaryBtn'
+import { SecondaryButtonDark } from '../shared/SecondaryBtn'
 import { ContactFormStyled } from '../Styled/ContactUsStyled'
 
 const ContactForm = () => {
@@ -55,7 +55,7 @@ const ContactForm = () => {
 						onChange={handleChange}
 					></textarea>
 				</div>
-				<SecondaryBtn text={'send message'}/>
+				<SecondaryButtonDark text={'send message'} />
 			</form>
 		</ContactFormStyled>
 	)

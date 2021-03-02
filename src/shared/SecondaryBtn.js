@@ -1,9 +1,9 @@
-import { SecondaryBtnStyled } from '../Styled/SecondaryBtnStyled'
+import { SecondaryBtnStyled, SecondaryBtnDarkStyled } from '../Styled/SecondaryBtnStyled'
 
-const SecondaryBtn = ({ text }) => {
-	const handleClick = () => {
-		console.log('Cliked!')
-	}
+const handleClick = () => {
+	alert('Cliked!')
+}
+export const SecondaryBtn = ({ text }) => {
 
 	return (
 		<SecondaryBtnStyled onClick={handleClick} type='button'>
@@ -12,4 +12,12 @@ const SecondaryBtn = ({ text }) => {
 	)
 }
 
-export default SecondaryBtn;
+export const SecondaryButtonDark = ({ text }) => {
+
+
+		return (
+			<SecondaryBtnDarkStyled onClick={handleClick} type='button'>
+				{text}
+			</SecondaryBtnDarkStyled>
+		)
+};

@@ -1,4 +1,4 @@
-import SecondaryBtn from '../shared/SecondaryBtn'
+import { SecondaryBtn } from '../shared/SecondaryBtn'
 import { ProjectStyled } from '../Styled/ProjectStyled'
 import managePreviewSml from '../data/images/detail/mobile/image-manage-preview-1.jpg'
 import managePreview1Med from '../data/images/detail/tablet/image-manage-preview-1.jpg'
@@ -37,7 +37,7 @@ const Project = () => {
 					</div>
 					<SecondaryBtn text='visit website' />
 				</aside>
-				<section className="project-background">
+				<section className='project-background'>
 					<h3>Project Background</h3>
 					<p>
 						This project was a front-end challenge from Frontend
