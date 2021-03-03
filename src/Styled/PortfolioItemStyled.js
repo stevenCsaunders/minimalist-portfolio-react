@@ -14,4 +14,18 @@ margin-bottom: 6rem;
 			margin-bottom: 5rem;
 		}
 	}
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    picture {
+      width: 50%;
+    }
+    .portfolio-item-content {
+      width: 40%;
+    }
+  }
+  @media (min-width: 1100px) {
+    gap: 8rem;
+  }
 `
