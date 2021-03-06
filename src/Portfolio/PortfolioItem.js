@@ -1,5 +1,5 @@
 import { SecondaryBtn } from '../shared/SecondaryBtn'
-import { PortfolioItemStyled } from '../Styled/PortfolioItemStyled'
+import { PortfolioItemStyled, PortfolioWrapper } from '../Styled/PortfolioItemStyled'
 import { tablet, desktop } from '../shared/MediaQueries'
 import manageSml from '../data/images/portfolio/mobile/image-portfolio-manage.jpg'
 import manageMed from '../data/images/portfolio/tablet/image-portfolio-manage.jpg'
@@ -7,6 +7,7 @@ import manageLrg from '../data/images/portfolio/desktop/image-portfolio-manage.j
 
 const PortfolioItem = () => {
 	return (
+		<PortfolioWrapper>
 		<PortfolioItemStyled>
 			<picture>
 				<source srcset={manageLrg} media={desktop} />
@@ -24,6 +25,7 @@ const PortfolioItem = () => {
 				<SecondaryBtn text={'view project'} />
 			</div>
 		</PortfolioItemStyled>
+		</PortfolioWrapper>
 	)
 }
 

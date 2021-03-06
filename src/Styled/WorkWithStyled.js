@@ -6,7 +6,6 @@ export const WorkWithStyled = styled.section`
 		font-size: var(--textExtraLarge);
 		font-weight: var(--textBold);
 		margin-bottom: 4rem;
-		padding: 0 1rem;
 	}
 
 	hr {
@@ -14,7 +13,7 @@ export const WorkWithStyled = styled.section`
 	}
 	@media (min-width: 768px) {
 		display: grid;
-		grid-template-columns: 1fr .5fr auto;
+		grid-template-columns: 1fr .25fr auto;
 		align-items: center;
 		gap: 3em;
 		text-align: left;
@@ -31,7 +30,6 @@ export const WorkWithStyled = styled.section`
 		}
 	}
 	@media (min-width: 1100px) {
-		grid-template-columns: 1fr 1fr auto;
-
+		grid-template-columns: 1fr 1.5fr auto;
 	}
 `
