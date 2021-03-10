@@ -17,13 +17,27 @@ export default {
 				maxLength: 96,
 			},
 		},
-		{
+    {
 			name: 'mainImage',
-			title: 'Main image',
-			type: 'imageWithAlt',
-			options: {
-				hotspot: true,
-			},
+			title: 'Main Project Images',
+			type: 'array',
+			of: [{
+					type: 'image',
+					fields: [
+						{
+							name: 'mediaTypeWidth',
+							title: 'Media Type Width',
+							type: 'string',
+							description: 'Mobile, tablet, or desktop'
+						},
+						{
+							name: 'alt',
+							type: 'string',
+							title: 'Alt Text',
+							description: 'Needed for SEO and Accesibility'
+						},
+					]
+			}],
 		},
 		{
 			name: 'projectOverview',
@@ -50,10 +64,23 @@ export default {
 			name: 'projectPreview',
 			title: 'Project Preview Images',
 			type: 'array',
-			of: [{ type: 'imageWithAlt' }],
-			options: {
-				hotspot: true,
-			},
+			of: [{
+					type: 'image',
+					fields: [
+						{
+							name: 'mediaTypeWidth',
+							title: 'Media Type Width',
+							type: 'string',
+							description: 'Mobile, tablet, or desktop'
+						},
+						{
+							name: 'alt',
+							type: 'string',
+							title: 'Alt Text',
+							description: 'Needed for SEO and Accesibility'
+						},
+					]
+			}],
 		},
 	],
 }

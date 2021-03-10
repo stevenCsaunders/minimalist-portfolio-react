@@ -2,6 +2,7 @@ export default {
   name: 'home',
   title: 'Home',
   type: 'document',
+  __experimental_actions: [/* 'create', */ 'update', /* 'delete', */ 'publish'],
   fields: [
     {
       name: 'heroContent',
@@ -11,10 +12,21 @@ export default {
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'imageWithAlt',
-      option: {
-        hotspot: true
-      }
+      type: 'image',
+      fields: [
+        {
+          name: 'mediaTypeWidth',
+          title: 'Media Type Width',
+          type: 'string',
+          description: 'Mobile, tablet, or desktop'
+        },
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+          description: 'Needed for SEO and Accesibility'
+        },
+      ]
     },
     {
       name: 'aboutContent',
@@ -23,24 +35,22 @@ export default {
     },
     {
       name: 'aboutImage',
-      title: 'About Me Image',
-      type: 'imageWithAlt',
-      option: {
-        hotspot: true
-      }
-    },
-    {
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
+      title: 'About Image',
+      type: 'image',
+      fields: [
         {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
+          name: 'mediaTypeWidth',
+          title: 'Media Type Width',
+          type: 'string',
+          description: 'Mobile, tablet, or desktop'
         },
-      ],
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alt Text',
+          description: 'Needed for SEO and Accesibility'
+        },
+      ]
     },
   ],
 }
