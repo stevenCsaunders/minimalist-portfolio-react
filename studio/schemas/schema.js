@@ -9,8 +9,8 @@ import blockContent from './blockContent'
 import contact from './contact'
 import workWith from './workWith'
 import project from './project'
+import multipleImage from './multipleImage'
 import home from './home'
-import imgWithAlt from './imgWithAlt'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -25,10 +25,9 @@ export default createSchema({
 		home,
 		contact,
 		workWith,
-   
+		multipleImage,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
-    imgWithAlt,
 		blockContent,
 	]),
 })

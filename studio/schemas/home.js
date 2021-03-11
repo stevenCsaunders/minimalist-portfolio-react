@@ -2,6 +2,7 @@ export default {
   name: 'home',
   title: 'Home',
   type: 'document',
+  __experimental_actions: [/* 'create', */ 'update', /* 'delete', */ 'publish'],
   fields: [
     {
       name: 'heroContent',
@@ -11,10 +12,7 @@ export default {
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'imageWithAlt',
-      option: {
-        hotspot: true
-      }
+      type: 'multipleImage',
     },
     {
       name: 'aboutContent',
@@ -23,24 +21,8 @@ export default {
     },
     {
       name: 'aboutImage',
-      title: 'About Me Image',
-      type: 'imageWithAlt',
-      option: {
-        hotspot: true
-      }
-    },
-    {
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{title: 'Normal', value: 'normal'}],
-          lists: [],
-        },
-      ],
+      title: 'About Image',
+      type: 'multipleImage',
     },
   ],
 }

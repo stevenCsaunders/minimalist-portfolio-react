@@ -17,13 +17,10 @@ export default {
 				maxLength: 96,
 			},
 		},
-		{
+    {
 			name: 'mainImage',
-			title: 'Main image',
-			type: 'imageWithAlt',
-			options: {
-				hotspot: true,
-			},
+			title: 'Main Project Images',
+			type: 'multipleImage'
 		},
 		{
 			name: 'projectOverview',
@@ -49,11 +46,7 @@ export default {
 		{
 			name: 'projectPreview',
 			title: 'Project Preview Images',
-			type: 'array',
-			of: [{ type: 'imageWithAlt' }],
-			options: {
-				hotspot: true,
-			},
+			type: 'multipleImage'
 		},
 	],
 }

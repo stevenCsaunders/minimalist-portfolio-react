@@ -1,9 +1,9 @@
 import { SecondaryBtn } from '../shared'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
 import { tablet, desktop } from '../shared/MediaQueries'
-import profileSml from '../data/images/homepage/mobile/image-homepage-profile.jpg'
-import profileMed from '../data/images/homepage/tablet/image-homepage-profile.jpg'
-import profileLrg from '../data/images/homepage/desktop/image-homepage-profile.jpg'
+import profileSml from '../data/images/homepage/mobile/image-homepage-profile-mobile.jpg'
+import profileMed from '../data/images/homepage/tablet/image-homepage-profile-tablet.jpg'
+import profileLrg from '../data/images/homepage/desktop/image-homepage-profile-desktop.jpg'
 const AboutMe = () => {
 	return (
 		<AboutMeStyled>
