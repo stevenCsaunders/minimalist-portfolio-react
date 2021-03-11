@@ -12,21 +12,7 @@ export default {
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'image',
-      fields: [
-        {
-          name: 'mediaTypeWidth',
-          title: 'Media Type Width',
-          type: 'string',
-          description: 'Mobile, tablet, or desktop'
-        },
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alt Text',
-          description: 'Needed for SEO and Accesibility'
-        },
-      ]
+      type: 'multipleImage',
     },
     {
       name: 'aboutContent',
@@ -36,21 +22,7 @@ export default {
     {
       name: 'aboutImage',
       title: 'About Image',
-      type: 'image',
-      fields: [
-        {
-          name: 'mediaTypeWidth',
-          title: 'Media Type Width',
-          type: 'string',
-          description: 'Mobile, tablet, or desktop'
-        },
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alt Text',
-          description: 'Needed for SEO and Accesibility'
-        },
-      ]
+      type: 'multipleImage',
     },
   ],
 }

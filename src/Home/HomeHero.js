@@ -1,9 +1,9 @@
 import { HomeHeroStyled } from '../Styled/HomeHeroStyled'
 import { PrimaryBtn } from '../shared'
 import { tablet, desktop } from '../shared/MediaQueries'
-import heroSml from '../data/images/homepage/mobile/image-homepage-hero.jpg'
-import heroMed from '../data/images/homepage/tablet/image-homepage-hero.jpg'
-import heroLrg from '../data/images/homepage/desktop/image-homepage-hero.jpg'
+import heroSml from '../data/images/homepage/mobile/image-homepage-hero-mobile.jpg'
+import heroMed from '../data/images/homepage/tablet/image-homepage-hero-tablet.jpg'
+import heroLrg from '../data/images/homepage/desktop/image-homepage-hero-desktop.jpg'
 
 const HomeHero = () => {
 	return (

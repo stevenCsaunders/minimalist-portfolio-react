@@ -1,9 +1,9 @@
 import { SecondaryBtn } from '../shared/SecondaryBtn'
 import { PortfolioItemStyled, PortfolioWrapper } from '../Styled/PortfolioItemStyled'
 import { tablet, desktop } from '../shared/MediaQueries'
-import manageSml from '../data/images/portfolio/mobile/image-portfolio-manage.jpg'
-import manageMed from '../data/images/portfolio/tablet/image-portfolio-manage.jpg'
-import manageLrg from '../data/images/portfolio/desktop/image-portfolio-manage.jpg'
+import manageSml from '../data/images/portfolio/mobile/image-portfolio-manage-mobile.jpg'
+import manageMed from '../data/images/portfolio/tablet/image-portfolio-manage-tablet.jpg'
+import manageLrg from '../data/images/portfolio/desktop/image-portfolio-manage-desktop.jpg'
 
 const PortfolioItem = () => {
 	return (
