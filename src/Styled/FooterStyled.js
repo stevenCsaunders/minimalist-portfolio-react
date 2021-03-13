@@ -10,7 +10,11 @@ const FooterStyled = styled.footer`
 	padding: 2.5rem var(--containerPadding);
 	@media (min-width: 768px) {
 		flex-direction: row;
-		justify-content: space-between
+		justify-content: space-between;
+	}
+	@media (min-width: 1100px) {
+		padding-left: 20%;
+		padding-right: 20%;
 	}
 `
 const FooterNavStyled = styled.nav`
