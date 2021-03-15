@@ -52,4 +52,8 @@ export const MainStyled = styled.main`
 		font-size: var(--textSmall);
 		transition: background 0.3s ease;
 	}
+	@media (min-width: 1100px) {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
 `

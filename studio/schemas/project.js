@@ -38,21 +38,16 @@ export default {
 			type: 'blockContent',
 		},
 		{
-			name: 'tech',
-			title: 'Technology Categories',
-			type: 'string',
-			description: 'Spearate technologies by /'
-		},
-		{
 			name: 'roles',
 			title: 'Roles',
 			type: 'string',
-			description: 'Spearate roles by /'
+			description: 'Spearate roles by /',
 		},
 		{
-			name: 'buttonLink',
-			title: 'Button Link',
-			type: 'url',
+			name: 'tech',
+			title: 'Technology Categories',
+			type: 'string',
+			description: 'Spearate technologies by /',
 		},
 		{
 			name: 'projectBackground',
