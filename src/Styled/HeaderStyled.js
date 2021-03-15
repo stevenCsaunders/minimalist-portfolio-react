@@ -8,4 +8,8 @@ export const HeaderStyled = styled.header`
   top: 0;
   width: 100%;
   padding: 0 var(--containerPadding);
+  @media (min-width: 1100px) {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
 `
