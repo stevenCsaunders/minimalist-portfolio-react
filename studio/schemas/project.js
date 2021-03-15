@@ -20,7 +20,17 @@ export default {
     {
 			name: 'mainImage',
 			title: 'Main Project Images',
-			type: 'multipleImage'
+			type: 'image',
+			options: {
+				hotsopot: true
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt',
+					type: 'string'
+				}
+			]
 		},
 		{
 			name: 'projectOverview',
@@ -29,7 +39,7 @@ export default {
 		},
 		{
 			name: 'roles',
-			title: 'Project Roles',
+			title: 'Roles',
 			type: 'string',
 			description: 'Spearate roles by /',
 		},
@@ -45,9 +55,34 @@ export default {
 			type: 'blockContent',
 		},
 		{
-			name: 'projectPreview',
-			title: 'Project Preview Images',
-			type: 'multipleImage'
+			name: 'projectPreview1',
+			title: 'Project Preview Image 1',
+			type: 'image',
+			options: {
+				hotsopot: true
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt',
+					type: 'string'
+				}
+			]
+		},
+		{
+			name: 'projectPreview2',
+			title: 'Project Preview Image 2',
+			type: 'image',
+			options: {
+				hotsopot: true
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt',
+					type: 'string'
+				}
+			]
 		},
 	],
 }
