@@ -14,7 +14,6 @@ export default () =>
           .schemaType('home')
           .documentId('singleton-home')
         ),
-      S.divider(),
       S.listItem()
         .title('Contact Page')
         .child(
@@ -24,7 +23,6 @@ export default () =>
           .schemaType('contact')
           .documentId('singleton-contact')
         ),
-      S.divider(),
       S.listItem()
       .title('Work With')
       .child(
@@ -34,6 +32,7 @@ export default () =>
         .schemaType('workWith')
         .documentId('singleton-workWith')
         ),
+        
         S.divider(),
         ...S.documentTypeListItems().filter(
           (listItem) =>
@@ -41,5 +40,4 @@ export default () =>
             listItem.getId()
             )
             ),
-            S.divider(),
       ]);
