@@ -31,6 +31,8 @@ export const AboutMeStyled = styled.section`
 		img {
 			height: 100%;
 			width : 100%;
+			object-fit: cover;
+      object-position: right;
 		}
 	}
 	@media (min-width: 1100px) {
