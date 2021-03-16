@@ -12,7 +12,17 @@ export default {
     {
       name: 'heroImage',
       title: 'Hero Image',
-      type: 'multipleImage',
+      type: 'image',
+			options: {
+				hotspot: true
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt',
+					type: 'string'
+				}
+			]
     },
     {
       name: 'aboutContent',
@@ -22,7 +32,17 @@ export default {
     {
       name: 'aboutImage',
       title: 'About Image',
-      type: 'multipleImage',
+      type: 'image',
+			options: {
+				hotspot: true
+			},
+			fields: [
+				{
+					name: 'alt',
+					title: 'Alt',
+					type: 'string'
+				}
+			]
     },
   ],
 }
