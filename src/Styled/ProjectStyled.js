@@ -54,10 +54,10 @@ export const ProjectStyled = styled.div`
 				.tech {
 					margin-bottom: 2rem;
 				}
-				button {
+			span {
 					grid-column-start: 1;
 					grid-row-start: 3;
-					width: 60%;
+					width: 75%;
 				}
 			}
 		}
@@ -69,7 +69,7 @@ export const ProjectStyled = styled.div`
 			grid-template-rows: 0.25fr 1fr;
 			gap: 8rem;
 			aside {
-				padding: 3rem 0;
+				padding: 8rem 0;
 				display: block;
 				grid-column-start: 1;
 				grid-row-start: 1;

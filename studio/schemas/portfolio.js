@@ -16,7 +16,7 @@ export default {
     },
     {
       name: 'portfolioImage',
-      title: 'Portfolio Project Image',
+      title: 'Portfolio Page Image',
       type: 'image',
       options: {
         hotspot: true

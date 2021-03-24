@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from './Home'
 import Portfolio from './Portfolio'
-import Project from './Project'
+import Detail from './Project'
 import Contact from './Contact'
 import { Footer, Header } from './shared'
 import { GlobalStyled, NormalizeStyled } from './Styled/GlobalStyled'
@@ -22,7 +22,7 @@ function App() {
 				<MainStyled>
 					<Switch>
 						<Route component={Home} exact path='/' />
-						<Route component={Project} path='/portfolio/:slug' />
+						<Route component={Detail} path='/portfolio/:slug' />
 						<Route component={Portfolio} path='/portfolio' />
 						<Route component={Contact} path='/contact' />
 					</Switch>

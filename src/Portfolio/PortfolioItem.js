@@ -1,11 +1,13 @@
-import { SecondaryBtn } from '../shared/SecondaryBtn'
+
 import {
 	PortfolioItemStyled,
 	PortfolioWrapper,
 } from '../Styled/PortfolioItemStyled'
-import { tablet, desktop } from '../shared/MediaQueries'
-import sanityClient from '../client'
+import sanityClient from '../client.js'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
+import BlockContent from '@sanity/block-content-to-react'
+import { SecondaryBtnStyled } from '../Styled/SecondaryBtnStyled'
 
 const PortfolioItem = () => {
 	const [projectData, setProject] = useState(null)
@@ -14,55 +16,45 @@ const PortfolioItem = () => {
 		sanityClient
 			.fetch(
 				`*[_type == "project"] {
-					title,
+					_id,
 					slug,
-					mainImage[]{
-						asset->{
-							_id,
+					title,
+					projectOverview,
+					portfolioImage {
+						asset-> {
 							url
 						},
-						mediaWidthType,
-					alt
-					}
-				}`
+						alt
+						}
+					}`
 			)
 			.then((data) => setProject(data))
 			.catch(console.error)
 	}, [])
-
-
-	console.log(projectData)
-
 
 	return (
 		<PortfolioWrapper>
 			{projectData &&
 				projectData.map((project, index) => (
 					<PortfolioItemStyled key={index}>
-						{/* <picture>
-							<source
-								srcset={project.mainImage.find(mediaTypeWidth => mediaTypeWidth === 'Desktop').asset.url}
-								media={desktop}
-							/>
-							<source
-								srcset={project.mainImage.find(({mediaTypeWidth}) => mediaTypeWidth === 'Tablet').asset.url}
-								media={tablet}
-							/>
-							<img
-								srcset={project.find({mainImage: [{ mediaTypeWidth: 'mobile'}]})}
-								alt='manage screenshot'
-							/>
-						</picture> */}
+						<img
+							src={project.portfolioImage.asset.url}
+							alt={project.portfolioImage.alt}
+						/>
 						<div className='portfolio-item-content'>
 							<h2>{project.title}</h2>
-							<p>
-								This project required me to build a fully
-								responsive landing page to the designs provided.
-								I used HTML5, along with CSS Grid and JavaScript
-								for the areas that required interactivity, such
-								as the testimonial slider.
-							</p>
-							<SecondaryBtn text={'view project'} />
+							<div>
+								<BlockContent
+									blocks={project.projectOverview}
+									projectId='7icmm84f'
+									dataset='production'
+								/>
+							</div>
+							<Link to={`/portfolio/${project.slug.current}`} slug={project.slug.current}>
+							<SecondaryBtnStyled>
+								View Project
+							</SecondaryBtnStyled>
+							</Link>
 						</div>
 					</PortfolioItemStyled>
 				))}

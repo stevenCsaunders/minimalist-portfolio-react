@@ -11,6 +11,7 @@ margin-bottom: 6rem;
      margin-bottom: 2rem; 
     }
 	.portfolio-item-content {
+    height: 100%;
 		border-top: solid 1px var(--grey);
     border-bottom: solid 1px var(--grey);
     padding: 3rem 0;
@@ -20,21 +21,35 @@ margin-bottom: 6rem;
 	}
   @media (min-width: 768px) {
     display: grid;
-    gap: 6rem;
+    gap: 2rem;
     align-items: center;
-    margin-bottom: 6em;
+    Justify-content: center;
+    margin-bottom: 10rem;
 		&:nth-child(odd) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 		&:nth-child(even) {
 			grid-auto-flow: dense;
 			grid-template-columns: repeat(2, 1fr);
-			picture {
+			img {
 				grid-column: 2;
 			}
 		}
+    .portfolio-item-content {
+      width: 70%;
+      justify-self: center;
+      align-self: center;
+    }
+		img {
+			height: 100%;
+      margin-bottom: 0; 
+			object-fit: contain;
+		}
   }
   @media (min-width: 1100px) {
-    gap: 8rem;
+    gap: 0;
+    .portfolio-item-content {
+      width: 60%;
+    }
   }
 `

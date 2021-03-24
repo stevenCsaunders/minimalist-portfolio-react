@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
-export const SecondaryBtnStyled = styled.button`
+export const SecondaryBtnStyled = styled.span`
+	margin: 0;
 	appearance: none;
 	background: var(--lightGrey);
 	border: 1px solid var(--darkBlue);
 	color: var(--darkBlue);
 	padding: 15px 40px;
 	letter-spacing: 1px;
-
+	text-transform: uppercase;
+	font-size: var(--textSmall);
+	transition: background 0.3s ease;
 	&:hover {
 		background: var(--darkBlue);
 		color: var(--lightGrey);
@@ -20,18 +23,21 @@ export const SecondaryBtnStyled = styled.button`
 	}
 `
 
-export const SecondaryBtnDarkStyled = styled.button`
+export const SecondaryBtnDarkStyled = styled.span`
 	appearance: none;
 	background: var(--darkBlue);
 	border: none;
 	color: var(--lightGrey);
 	padding: 15px 40px;
 	letter-spacing: 1px;
-
+	text-transform: uppercase;
+	font-size: var(--textSmall);
+	transition: background 0.3s ease;
 	&:hover {
-		background: var(--darkBlue);
-		color: var(--lightGrey);
+		background: var(--lightGray);
+		color: var(--darkBlue);
 		cursor: pointer;
+		border: 1px solid var(--darkBlue);
 	}
 
 	&:disabled,

@@ -14,7 +14,7 @@ export default {
 			type: 'slug',
 			options: {
 				source: 'title',
-				maxLength: 96,
+				maxLength: 96
 			},
 		},
     {
@@ -84,5 +84,20 @@ export default {
 				}
 			]
 		},
+		{
+      name: 'portfolioImage',
+      title: 'Portfolio Project Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        }
+      ]
+    }
 	],
 }
