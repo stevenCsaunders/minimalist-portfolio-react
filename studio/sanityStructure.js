@@ -32,6 +32,7 @@ export default () =>
         .schemaType('workWith')
         .documentId('singleton-workWith')
         ),
+        
         S.divider(),
         ...S.documentTypeListItems().filter(
           (listItem) =>
@@ -39,5 +40,4 @@ export default () =>
             listItem.getId()
             )
             ),
-            S.divider(),
       ]);

@@ -22,7 +22,7 @@ export default {
 			title: 'Main Project Images',
 			type: 'image',
 			options: {
-				hotsopot: true
+				hotspot: true
 			},
 			fields: [
 				{
@@ -59,7 +59,7 @@ export default {
 			title: 'Project Preview Image 1',
 			type: 'image',
 			options: {
-				hotsopot: true
+				hotspot: true
 			},
 			fields: [
 				{
@@ -74,7 +74,7 @@ export default {
 			title: 'Project Preview Image 2',
 			type: 'image',
 			options: {
-				hotsopot: true
+				hotspot: true
 			},
 			fields: [
 				{
@@ -100,4 +100,4 @@ export default {
       ]
     }
 	],
-}
+		}

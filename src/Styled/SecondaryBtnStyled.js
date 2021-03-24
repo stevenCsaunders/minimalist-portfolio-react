@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const SecondaryBtnStyled = styled.span`
-	margin: 0;
 	appearance: none;
 	background: var(--lightGrey);
 	border: 1px solid var(--darkBlue);

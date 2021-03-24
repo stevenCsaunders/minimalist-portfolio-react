@@ -9,7 +9,6 @@ import blockContent from './blockContent'
 import contact from './contact'
 import workWith from './workWith'
 import project from './project'
-import multipleImage from './multipleImage'
 import portfolio from './portfolio'
 import home from './home'
 
@@ -27,7 +26,6 @@ export default createSchema({
 		contact,
 		workWith,
 		portfolio,
-		multipleImage,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 		blockContent,
