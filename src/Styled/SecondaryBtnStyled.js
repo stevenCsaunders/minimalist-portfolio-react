@@ -2,12 +2,14 @@ import styled from 'styled-components'
 
 export const SecondaryBtnStyled = styled.span`
 	appearance: none;
+	display: block;
 	background: var(--lightGrey);
 	border: 1px solid var(--darkBlue);
 	color: var(--darkBlue);
 	padding: 15px 40px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+	text-align: center;
 	font-size: var(--textSmall);
 	transition: background 0.3s ease;
 	&:hover {

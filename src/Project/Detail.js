@@ -59,7 +59,7 @@ const Detail = () => {
 			<article>
 				<aside>
 					<h2>{detail.title}</h2>
-					<div>
+					<div className="project-overview">
 						<BlockContent
 							blocks={detail.projectOverview}
 							projectId='7icmm84f'

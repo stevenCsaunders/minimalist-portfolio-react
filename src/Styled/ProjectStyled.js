@@ -41,20 +41,23 @@ export const ProjectStyled = styled.div`
 		article {
 			aside {
 				display: grid;
-				grid-template-columns: 0.75fr 1fr;
-				grid-template-rows: 1fr 1fr 0.7fr;
-				grid-column-gap: 4rem;
+				grid: repeat(2, auto) / repeat(2, auto);
+				align-items: start;
+				grid-column-gap: 4em;
+				grid-row-gap: 1.5em;
 				h2 {
 					margin: 0;
+					grid: 1 / 2;
 				}
-				p {
-					grid-row: 1 / -1;
+				.project-overview {
+					grid-row: 1 / 4;
 					margin: 0;
 				}
 				.tech {
 					margin-bottom: 2rem;
+					grid-row: 2 / 3;
 				}
-			span {
+				span {
 					grid-column-start: 1;
 					grid-row-start: 3;
 					width: 75%;
@@ -69,7 +72,7 @@ export const ProjectStyled = styled.div`
 			grid-template-rows: 0.25fr 1fr;
 			gap: 8rem;
 			aside {
-				padding: 8rem 0;
+				padding: 4rem 0;
 				display: block;
 				grid-column-start: 1;
 				grid-row-start: 1;
@@ -115,11 +118,13 @@ export const ProjectNavStyled = styled.section`
 	}
 
 	@media (min-width: 768px) {
-		.previous-arrow, .next-arrow {
+		.previous-arrow,
+		.next-arrow {
 			padding: 2rem 0;
 			display: flex;
 			align-items: center;
-			img, p {
+			img,
+			p {
 				margin: 0;
 			}
 			p {
@@ -127,7 +132,7 @@ export const ProjectNavStyled = styled.section`
 			}
 		}
 		.previous-arrow {
-			img{
+			img {
 				margin-right: 3rem;
 			}
 		}
