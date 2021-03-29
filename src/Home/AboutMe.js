@@ -1,17 +1,16 @@
+import { Link } from 'react-router-dom'
 import { SecondaryBtn } from '../shared'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
-import { tablet, desktop } from '../shared/MediaQueries'
+
 import profileSml from '../data/images/homepage/mobile/image-homepage-profile-mobile.jpg'
-import profileMed from '../data/images/homepage/tablet/image-homepage-profile-tablet.jpg'
-import profileLrg from '../data/images/homepage/desktop/image-homepage-profile-desktop.jpg'
+
 const AboutMe = () => {
+
 	return (
 		<AboutMeStyled>
-			<picture>
-				<source srcset={profileLrg} media={desktop} />
-				<source srcset={profileMed} media={tablet} />
+
 				<img src={profileSml} alt='headshot' />
-			</picture>
+
 			<div className='about-content'>
 				<h2>About Me</h2>
 				<p>
@@ -25,7 +24,9 @@ const AboutMe = () => {
 					find me outdoors shredding the gnar or hanging with the fam.
 					Feel free to check out my work.
 				</p>
-				<SecondaryBtn text={'go to portfolio'} />
+				<Link to={'/portfolio'}>
+					<SecondaryBtn text={`go to portfolio`} />
+				</Link>
 			</div>
 		</AboutMeStyled>
 	)

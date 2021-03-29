@@ -15,6 +15,7 @@ const FooterStyled = styled.footer`
 	@media (min-width: 1100px) {
 		padding-left: 20%;
 		padding-right: 20%;
+		margin-top: ;
 	}
 `
 const FooterNavStyled = styled.nav`

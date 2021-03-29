@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PrimaryBtnStyled = styled.button`
+export const PrimaryBtnStyled = styled.span`
 	color: var(--lightGrey);
 	background: var(--blue);
 	z-index: 1;
