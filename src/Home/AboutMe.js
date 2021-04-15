@@ -9,9 +9,9 @@ const AboutMe = () => {
 	return (
 		<AboutMeStyled>
 
-				<img src={profileSml} alt='headshot' />
+			<img src={profileSml} alt='headshot' />
 
-			<div className='about-content'>
+			<div className='about-content' id='about-me'>
 				<h2>About Me</h2>
 				<p>
 					I’m a front-end developer looking for a new role in an

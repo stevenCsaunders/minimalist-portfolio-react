@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-// import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link'
 import sanityClient from '../client'
 import { HomeHeroStyled } from '../Styled/HomeHeroStyled'
 import { PrimaryBtn } from '../shared'
@@ -46,7 +46,7 @@ const HomeHero = () => {
 				<h1>
 					{homeContent.heroContent}
 				</h1>
-				<PrimaryBtn />
+				<Link to='/#about-me'><PrimaryBtn /></Link>
 			</div>
 		</HomeHeroStyled>
 	)

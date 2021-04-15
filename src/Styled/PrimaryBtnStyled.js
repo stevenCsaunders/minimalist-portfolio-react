@@ -1,24 +1,34 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const PrimaryBtnStyled = styled.div`
 	color: var(--lightGrey);
-
-	width: 50%;
-	height: 4rem;
+	width: 20rem;
 	display: grid;
-	grid-template-columns: 25% auto;
-	align-items: center;
-	padding: 0;
+	grid-template-columns: 25% 1fr;
 	margin-top: 3rem;
-	letter-spacing: 1px;
 	border: none;
 	.arrow {
+		grid-area: 1 / 1 / 1 / 1;
 		background: var(--darkBlue);
+		padding: 1.2rem 0;
+		text-align: center;
+		opacity: .5;
+		z-index: 10;
+		svg {
+			margin-top: .2rem;
+		}
 	}
 	.about-me {
+		grid-area: 1 / 4 / 1 / 1;
 		background: var(--blue);
+		padding: 1.2rem 0 1.2rem 25%;
+		text-align: center;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		font-size: var(--textSmall);
 	}
-	&:hover,
+
+	&:hover .about-me,
 	&:hover svg g {
 		background: var(--cyan);
 		color: var(--lightGrey);
@@ -33,7 +43,7 @@ export const PrimaryBtnStyled = styled.div`
 		color: white;
 	}
 	&:disabled::before {
-  background: var(--black);
-	opacity: 0.1;
+		background: var(--black);
+		opacity: 0.1;
 	}
 `
