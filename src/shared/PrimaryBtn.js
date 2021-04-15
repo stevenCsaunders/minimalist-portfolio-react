@@ -2,8 +2,8 @@ import { PrimaryBtnStyled } from '../Styled/PrimaryBtnStyled'
 
 const PrimaryBtn = () => {
 	return (
-		<PrimaryBtnStyled type='button'>
-			<div aria-label='Primary Button Down Arrow'>
+		<PrimaryBtnStyled>
+			<div className='arrow' aria-label='Primary Button Down Arrow'>
 				<svg
 					role='img'
 					aria-labelledby='primary-button-img'
@@ -21,7 +21,7 @@ const PrimaryBtn = () => {
 					</g>
 				</svg>
 			</div>
-			<div>
+			<div className='about-me'>
 				<span>About Me</span>
 			</div>
 		</PrimaryBtnStyled>

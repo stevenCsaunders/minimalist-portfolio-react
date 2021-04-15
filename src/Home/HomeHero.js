@@ -1,23 +1,52 @@
+import { useState, useEffect } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
+import sanityClient from '../client'
 import { HomeHeroStyled } from '../Styled/HomeHeroStyled'
 import { PrimaryBtn } from '../shared'
-import { tablet, desktop } from '../shared/MediaQueries'
-import heroSml from '../data/images/homepage/mobile/image-homepage-hero-mobile.jpg'
-import heroMed from '../data/images/homepage/tablet/image-homepage-hero-tablet.jpg'
-import heroLrg from '../data/images/homepage/desktop/image-homepage-hero-desktop.jpg'
+
 
 const HomeHero = () => {
+	const [homeContent, setHomeContent] = useState(null)
+
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`
+			*[_id == "singleton-home"] {
+				_id,
+				heroContent,
+				heroImage{
+					alt,
+					asset-> {
+						_id,
+						url
+					},
+					aboutContent,
+					aboutimage {
+						alt,
+						asset-> {
+							_id,
+							url
+						}
+					}
+				}
+			}
+			`
+			)
+			.then((data) => setHomeContent(data[0]))
+			.catch(console.error)
+	}, [])
+
+	if(!homeContent) return <div>Loading...</div>
+
 	return (
 		<HomeHeroStyled>
-			<picture>
-				<source srcset={heroLrg} media={desktop} />
-				<source srcset={heroMed} media={tablet} />
-				<img src={heroSml} alt='computer monitor on desk' />
-			</picture>
+			<img src={homeContent.heroImage.asset.url} alt={homeContent.heroImage.alt} />
 			<div className='hero-header'>
 				<h1>
-					Hey, I’m Alex Spencer and I love building beautiful websites
+					{homeContent.heroContent}
 				</h1>
-				<PrimaryBtn />
+				<Link to='/#about-me'><PrimaryBtn /></Link>
 			</div>
 		</HomeHeroStyled>
 	)

@@ -26,7 +26,7 @@ export const SecondaryBtnStyled = styled.span`
 
 export const SecondaryBtnDarkStyled = styled.span`
 	appearance: none;
-	background: var(--darkBlue);
+	background: var(--blue);
 	border: none;
 	color: var(--lightGrey);
 	padding: 15px 40px;

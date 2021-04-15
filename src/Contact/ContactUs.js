@@ -1,36 +1,87 @@
-import { ContactUsStyled }from '../Styled/ContactUsStyled'
+import { ContactUsStyled } from '../Styled/ContactUsStyled'
+import { useEffect, useState } from 'react'
+import sanityClient from '../client'
+import BlockContent from '@sanity/block-content-to-react'
 import ContactForm from './ContactForm'
-import github from '../data/images/icons/github.svg'
-import twitter from '../data/images/icons/twitter.svg'
-import linkedin from '../data/images/icons/linkedin.svg'
-
 
 export const ContactUs = () => {
+	const [contactData, setContactData] = useState(null)
+
+	useEffect(() => {
+		sanityClient
+			.fetch(
+				`
+			*[_id == "singleton-contact"] {
+				_id,
+				title,
+				contactIntro,
+				githubIcon {
+					asset-> {
+						_id,
+						url
+					},
+					alt,
+					link
+				},
+				twitterIcon {
+					asset-> {
+						_id,
+						url
+					},
+					alt,
+					link
+				},
+				linkedInIcon {
+					asset-> {
+						_id,
+						url
+					},
+					alt,
+					link
+				}
+			}
+		`
+			)
+			.then((data) => setContactData(data[0]))
+			.catch(console.error)
+	}, [])
+
+	if (!contactData) return <div>Loading...</div>
+
 	return (
 		<article>
 			<ContactUsStyled>
-				<h2>Get in Touch</h2>
+				<h2>{contactData.title}</h2>
 				<div>
-					<p>
-						I’d love to hear about what you’re working on and how I can
-						help. I’m currently looking for a new role and am open to a
-						wide range of opportunities. My preference would be to find
-						a position in a company in London. But I’m also happy to
-						hear about opportunites that don’t fit that description. I’m
-						a hard-working and positive person who will always approach
-						each task with a sense of purpose and attention to detail.
-						Please do feel free to check out my online profiles below
-						and get in touch using the form.
-					</p>
+					<BlockContent
+						blocks={contactData.contactIntro}
+						projectId='7icmm84f'
+						dataset='production'
+					/>
 					<ul className='social-nav '>
 						<li>
-							<img src={github} alt='github' />
+							<a href={contactData.githubIcon.link} target='_blank' rel='noreferrer'>
+								<img
+									src={contactData.githubIcon.asset.url}
+									alt={contactData.githubIcon.alt}
+								/>
+							</a>
 						</li>
 						<li>
-							<img src={twitter} alt='twitter' />
+							<a href={contactData.twitterIcon.link} target='_blank' rel='noreferrer'>
+								<img
+									src={contactData.twitterIcon.asset.url}
+									alt={contactData.twitterIcon.alt}
+								/>
+							</a>
 						</li>
 						<li>
-							<img src={linkedin} alt='linkedin' />
+							<a href={contactData.linkedInIcon.link} target='_blank' rel='noreferrer'>
+								<img
+									src={contactData.linkedInIcon.asset.url}
+									alt={contactData.linkedInIcon.alt}
+								/>
+							</a>
 						</li>
 					</ul>
 				</div>
