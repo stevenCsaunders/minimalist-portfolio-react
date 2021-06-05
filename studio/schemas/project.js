@@ -98,6 +98,11 @@ export default {
           type: 'string',
         }
       ]
-    }
+    },
+		{
+			name: 'websiteUrl',
+			title: 'Website URL',
+			type: 'string',
+		},
 	],
 		}

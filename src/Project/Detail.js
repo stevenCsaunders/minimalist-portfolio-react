@@ -1,10 +1,9 @@
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import sanityClient from '../client'
 import BlockContent from '@sanity/block-content-to-react'
-import { SecondaryBtnStyled } from '../Styled/SecondaryBtnStyled'
+import { SecondaryBtn } from '../shared/SecondaryBtn'
 import { ProjectStyled } from '../Styled/ProjectStyled'
-import ProjectNav from './ProjectNav'
 
 const Detail = () => {
 	const [detail, setDetail] = useState(null)
@@ -33,12 +32,13 @@ const Detail = () => {
 						},
 						alt
 					},
-					projectPreview2 {
+				projectPreview2 {
 					asset->{
 						url
 						},
 						alt
-					}
+					},
+				websiteUrl
 			}
 		`
 			)
@@ -70,7 +70,7 @@ const Detail = () => {
 						<p>{detail.roles}</p>
 						<p>{detail.tech}</p>
 					</div>
-					<SecondaryBtnStyled>Visit website</SecondaryBtnStyled>
+					{detail.websiteUrl ? <Link to={detail.websiteUrl}><SecondaryBtn text="Visit Website"></SecondaryBtn></Link> : ""}
 				</aside>
 				<section className='project-background'>
 					<h3>Project Background</h3>
@@ -92,7 +92,6 @@ const Detail = () => {
 					</div>
 				</section>
 			</article>
-			<ProjectNav />
 		</ProjectStyled>
 	)
 }
