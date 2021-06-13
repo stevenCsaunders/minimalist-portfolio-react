@@ -14,23 +14,13 @@ export default {
 			type: 'slug',
 			options: {
 				source: 'title',
-				maxLength: 96
+				maxLength: 96,
 			},
 		},
-    {
+		{
 			name: 'mainImage',
-			title: 'Main Project Images',
-			type: 'image',
-			options: {
-				hotspot: true
-			},
-			fields: [
-				{
-					name: 'alt',
-					title: 'Alt',
-					type: 'string'
-				}
-			]
+			title: 'Main Image',
+			type: 'imageWithOptions',
 		},
 		{
 			name: 'projectOverview',
@@ -57,52 +47,22 @@ export default {
 		{
 			name: 'projectPreview1',
 			title: 'Project Preview Image 1',
-			type: 'image',
-			options: {
-				hotspot: true
-			},
-			fields: [
-				{
-					name: 'alt',
-					title: 'Alt',
-					type: 'string'
-				}
-			]
+			type: 'imageWithOptions',
 		},
 		{
 			name: 'projectPreview2',
 			title: 'Project Preview Image 2',
-			type: 'image',
-			options: {
-				hotspot: true
-			},
-			fields: [
-				{
-					name: 'alt',
-					title: 'Alt',
-					type: 'string'
-				}
-			]
+			type: 'imageWithOptions',
 		},
 		{
-      name: 'portfolioImage',
-      title: 'Portfolio Project Image',
-      type: 'image',
-      options: {
-        hotspot: true
-      },
-      fields: [
-        {
-          name: 'alt',
-          title: 'Alt',
-          type: 'string',
-        }
-      ]
-    },
+			name: 'portfolioImage',
+			title: 'Portfolio Project Image',
+			type: 'imageWithOptions',
+		},
 		{
 			name: 'websiteUrl',
 			title: 'Website URL',
 			type: 'string',
 		},
 	],
-		}
+}

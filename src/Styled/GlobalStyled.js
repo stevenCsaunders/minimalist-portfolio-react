@@ -231,7 +231,7 @@ export const GlobalStyled = createGlobalStyle`
   --headingFont: "Ibarra Real Nova", serif;
   --bodyFont: "Public Sans", sans-serif;
   --baseFontSize: 10px;
-  --textExtraLarge: 3.9rem;
+  --textExtraLarge: 3.5rem;
   --textLarge: 3.25rem;
   --textMedium: 2.5rem;
   --textRegular: 1.6rem;

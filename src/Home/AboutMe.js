@@ -1,29 +1,27 @@
 import { Link } from 'react-router-dom'
 import { SecondaryBtn } from '../shared'
 import { AboutMeStyled } from '../Styled/AboutMeStyled'
+import BlockContent from '@sanity/block-content-to-react'
 
-import profileSml from '../data/images/homepage/mobile/image-homepage-profile-mobile.jpg'
 
-const AboutMe = () => {
+const AboutMe = ({ aboutContent }) => {
+
+	console.log(aboutContent);
 
 	return (
 		<AboutMeStyled>
-
-			<img src={profileSml} alt='headshot' />
+			<img
+				src={aboutContent.aboutImage.asset.url}
+				alt={aboutContent.aboutImage.alt}
+			/>
 
 			<div className='about-content' id='about-me'>
 				<h2>About Me</h2>
-				<p>
-					I’m a front-end developer looking for a new role in an
-					exciting company. I focus on writing accessible and semantic
-					HTML, using modern CSS practices and writing clean
-					JavaScript. When writing JavaScript code, I mostly use
-					React, but I can adapt to whatever tools are required. I’m
-					based in Syracuse, UT, but I’m happy working remotely and
-					have experience on remote teams. When I’m not coding, you’ll
-					find me outdoors shredding the gnar or hanging with the fam.
-					Feel free to check out my work.
-				</p>
+				<BlockContent
+									blocks={aboutContent.aboutContent}
+									projectId='7icmm84f'
+									dataset='production'
+								/>
 				<Link to={'/portfolio'}>
 					<SecondaryBtn text={`go to portfolio`} />
 				</Link>

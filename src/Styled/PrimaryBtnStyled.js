@@ -13,7 +13,7 @@ export const PrimaryBtnStyled = styled.div`
 		padding: 1.2rem 0;
 		text-align: center;
 		opacity: .5;
-		z-index: 10;
+		z-index: 9;
 		svg {
 			margin-top: .2rem;
 		}

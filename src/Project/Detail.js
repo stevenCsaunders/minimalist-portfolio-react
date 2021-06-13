@@ -4,6 +4,7 @@ import sanityClient from '../client'
 import BlockContent from '@sanity/block-content-to-react'
 import { SecondaryBtn } from '../shared/SecondaryBtn'
 import { ProjectStyled } from '../Styled/ProjectStyled'
+import Spinner from '../shared/Spinner'
 
 const Detail = () => {
 	const [detail, setDetail] = useState(null)
@@ -46,7 +47,7 @@ const Detail = () => {
 			.catch(console.error)
 	}, [slug])
 
-	if (!detail) return <div>...Loading</div>
+	if (!detail) return <Spinner/>
 
 	return (
 		<ProjectStyled>
@@ -59,7 +60,7 @@ const Detail = () => {
 			<article>
 				<aside>
 					<h2>{detail.title}</h2>
-					<div className="project-overview">
+					<div className='project-overview'>
 						<BlockContent
 							blocks={detail.projectOverview}
 							projectId='7icmm84f'
@@ -67,10 +68,25 @@ const Detail = () => {
 						/>
 					</div>
 					<div className='tech'>
-						<p>{detail.roles}</p>
-						<p>{detail.tech}</p>
+						<p>
+							<strong>Roles</strong>
+							<br />
+							{detail.roles}
+						</p>
+						<hr />
+						<p>
+							<strong>Tech</strong>
+							<br />
+							{detail.tech}
+						</p>
 					</div>
-					{detail.websiteUrl ? <Link to={detail.websiteUrl}><SecondaryBtn text="Visit Website"></SecondaryBtn></Link> : ""}
+					{detail.websiteUrl ? (
+						<Link to={detail.websiteUrl}>
+							<SecondaryBtn text='Visit Website'></SecondaryBtn>
+						</Link>
+					) : (
+						null
+					)}
 				</aside>
 				<section className='project-background'>
 					<h3>Project Background</h3>

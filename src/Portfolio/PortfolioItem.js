@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import BlockContent from '@sanity/block-content-to-react'
 import { SecondaryBtn } from '../shared'
+import Spinner from '../shared/Spinner'
 
 const PortfolioItem = () => {
 	const [projectData, setProject] = useState(null)
@@ -31,6 +32,7 @@ const PortfolioItem = () => {
 			.then(data => setProject(data))
 			.catch(console.error)
 	}, [])
+	if (!projectData) return <Spinner/>
 
 	return (
 		<PortfolioWrapper>

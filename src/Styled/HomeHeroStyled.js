@@ -15,7 +15,7 @@ export const HomeHeroStyled = styled.section`
 			background-color: var(--lightGrey);
 			bottom: 0;
 			left: 0;
-			width: 80%;
+			width: 50%;
 		}
 		@media (min-width: 1100px) {
 		.hero-header {

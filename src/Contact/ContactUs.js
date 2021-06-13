@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import sanityClient from '../client'
 import BlockContent from '@sanity/block-content-to-react'
 import ContactForm from './ContactForm'
+import SocialIcons from '../shared/SocialIcons'
+import Spinner from '../shared/Spinner'
 
 export const ContactUs = () => {
 	const [contactData, setContactData] = useState(null)
@@ -14,31 +16,7 @@ export const ContactUs = () => {
 			*[_id == "singleton-contact"] {
 				_id,
 				title,
-				contactIntro,
-				githubIcon {
-					asset-> {
-						_id,
-						url
-					},
-					alt,
-					link
-				},
-				twitterIcon {
-					asset-> {
-						_id,
-						url
-					},
-					alt,
-					link
-				},
-				linkedInIcon {
-					asset-> {
-						_id,
-						url
-					},
-					alt,
-					link
-				}
+				contactIntro
 			}
 		`
 			)
@@ -46,7 +24,7 @@ export const ContactUs = () => {
 			.catch(console.error)
 	}, [])
 
-	if (!contactData) return <div>Loading...</div>
+	if (!contactData) return <Spinner/>
 
 	return (
 		<article>
@@ -58,32 +36,7 @@ export const ContactUs = () => {
 						projectId='7icmm84f'
 						dataset='production'
 					/>
-					<ul className='social-nav '>
-						<li>
-							<a href={contactData.githubIcon.link} target='_blank' rel='noreferrer'>
-								<img
-									src={contactData.githubIcon.asset.url}
-									alt={contactData.githubIcon.alt}
-								/>
-							</a>
-						</li>
-						<li>
-							<a href={contactData.twitterIcon.link} target='_blank' rel='noreferrer'>
-								<img
-									src={contactData.twitterIcon.asset.url}
-									alt={contactData.twitterIcon.alt}
-								/>
-							</a>
-						</li>
-						<li>
-							<a href={contactData.linkedInIcon.link} target='_blank' rel='noreferrer'>
-								<img
-									src={contactData.linkedInIcon.asset.url}
-									alt={contactData.linkedInIcon.alt}
-								/>
-							</a>
-						</li>
-					</ul>
+					<SocialIcons />
 				</div>
 			</ContactUsStyled>
 			<ContactForm />

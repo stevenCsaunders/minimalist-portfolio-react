@@ -7,11 +7,15 @@ export const TopNavStyled = styled.nav`
 	overflow: hidden;
 	width: 100%;
 	height: var(--headerHeight);
+	.logoTop {
+		width: 30rem;
+	}
 `
 
 export const NavList = styled.ul`
 	background-color: var(--darkBlue);
 	position: fixed;
+	z-index: 10;
 	top: 6rem;
 	right: 10%;
 	text-align: center;

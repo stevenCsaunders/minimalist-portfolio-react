@@ -15,7 +15,6 @@ const FooterStyled = styled.footer`
 	@media (min-width: 1100px) {
 		padding-left: 20%;
 		padding-right: 20%;
-		margin-top: ;
 	}
 `
 const FooterNavStyled = styled.nav`
@@ -39,11 +38,9 @@ const FooterNavStyled = styled.nav`
 			letter-spacing: 2px;
 		}
 	}
-	svg {
+	img{
 		margin: 2em 0;
-		path {
-			fill: var(--lightGrey);
-		}
+		width: 5rem
 	}
 	@media (min-width: 768px) {
 		flex-direction: row;
@@ -59,7 +56,7 @@ const FooterNavStyled = styled.nav`
 			margin-top: 0;
 		}
 		}
-		svg {
+		img {
 			margin: 0 4rem 0 0;
 		}
 	}

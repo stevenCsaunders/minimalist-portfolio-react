@@ -30,6 +30,6 @@ export const WorkWithStyled = styled.section`
 		}
 	}
 	@media (min-width: 1100px) {
-		grid-template-columns: 1fr 1.5fr auto;
+		grid-template-columns: 1fr 1.5fr 1fr;
 	}
 `
