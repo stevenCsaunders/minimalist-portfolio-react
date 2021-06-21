@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import sanityClient from '../client'
-import Spinner from './Spinner'
 
 const SocialIcons = () => {
 	const [socialIconData, setSocialIconData] = useState(null)
@@ -20,7 +19,7 @@ const SocialIcons = () => {
 			.catch(console.error)
 	}, [])
 
-	if (!socialIconData) return <Spinner/>
+	if (!socialIconData) return 'Loading'
 
 	return (
 		<ul>

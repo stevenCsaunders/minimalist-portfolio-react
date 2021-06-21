@@ -1,91 +1,68 @@
 import styled from 'styled-components'
 
 export const SpinnerStyled = styled.div`
-    width: 250px;
-    height: 250px;
-    position: relative;
-    left: 50%;
-.ring
-{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  width:150px;
-  height:150px;
-  background:transparent;
-  border:3px solid #16BDBE;
-  border-radius:50%;
-  text-align:center;
-  line-height:150px;
-  font-family:sans-serif;
-  font-size:20px;
-  color:#16BDBE;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  text-shadow:0 0 10px #16BDBE;
-  box-shadow:0 0 20px rgba(0,0,0,.5);
+text-align: center;
+font-size: large;
+.loader,
+.loader:before,
+.loader:after {
+  background: #25bfc0;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
 }
-.ring:before
-{
-  content:'';
-  position:absolute;
-  top:-3px;
-  left:-3px;
-  width:100%;
-  height:100%;
-  border:3px solid transparent;
-  border-top:3px solid #16BDBE;
-  border-right:3px solid #16BDBE;
-  border-radius:50%;
-  animation:animateC 2s linear infinite;
+.loader {
+  color: #25bfc0;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
-span
-{
-  display:block;
-  position:absolute;
-  top:calc(50% - 2px);
-  left:50%;
-  width:50%;
-  height:4px;
-  background:transparent;
-  transform-origin:left;
-  animation:animate 2s linear infinite;
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
 }
-span:before
-{
-  content:'';
-  position:absolute;
-  width:16px;
-  height:16px;
-  border-radius:50%;
-  background:#16BDBE;
-  top:-6px;
-  right:-8px;
-  box-shadow:0 0 20px #16BDBE;
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
 }
-@keyframes animateC
-{
-  0%
-  {
-    transform:rotate(0deg);
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
   }
-  100%
-  {
-    transform:rotate(360deg);
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
 }
-@keyframes animate
-{
-  0%
-  {
-    transform:rotate(45deg);
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
   }
-  100%
-  {
-    transform:rotate(405deg);
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
 }
+
 `
 
 export default SpinnerStyled;

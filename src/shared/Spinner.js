@@ -4,8 +4,8 @@ const Spinner = () => {
 	return (
 		<SpinnerStyled>
 			<div class='ring'>
-				Loading
-				<span></span>
+				Loading...
+				<div class="loader"></div>
 			</div>
 		</SpinnerStyled>
 	)

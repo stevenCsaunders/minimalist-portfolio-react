@@ -27,10 +27,10 @@ export const ProjectStyled = styled.div`
 	}
 	.project-background {
 		p {
-			margin-bottom: 6rem;
+			margin-bottom: 2rem;
 		}
 		.project-preview {
-			margin-bottom: 3rem;
+			margin: 6rem 0;
 			img {
 				width: 100%;
 				margin-bottom: 3rem;
