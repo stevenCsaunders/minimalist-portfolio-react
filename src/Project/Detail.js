@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import sanityClient from '../client'
 import BlockContent from '@sanity/block-content-to-react'
@@ -47,7 +47,7 @@ const Detail = () => {
 			.catch(console.error)
 	}, [slug])
 
-	if (!detail) return <Spinner/>
+	if (!detail) return <Spinner />
 
 	return (
 		<ProjectStyled>
@@ -81,12 +81,14 @@ const Detail = () => {
 						</p>
 					</div>
 					{detail.websiteUrl ? (
-						<Link to={detail.websiteUrl}>
+						<a
+							href={detail.websiteUrl}
+							rel='noopener noreferrer'
+							target='_blank'
+						>
 							<SecondaryBtn text='Visit Website'></SecondaryBtn>
-						</Link>
-					) : (
-						null
-					)}
+						</a>
+					) : null}
 				</aside>
 				<section className='project-background'>
 					<h3>Project Background</h3>
