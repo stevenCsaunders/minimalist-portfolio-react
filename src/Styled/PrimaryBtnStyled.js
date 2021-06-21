@@ -19,6 +19,7 @@ export const PrimaryBtnStyled = styled.div`
 		}
 	}
 	.about-me {
+		transition: background 0.3s ease;
 		grid-area: 1 / 4 / 1 / 1;
 		background: var(--blue);
 		padding: 1.2rem 0 1.2rem 25%;
@@ -30,6 +31,7 @@ export const PrimaryBtnStyled = styled.div`
 
 	&:hover .about-me,
 	&:hover svg g {
+		transition: all .5;
 		background: var(--cyan);
 		color: var(--lightGrey);
 		cursor: pointer;
