@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SecondaryButtonDark } from '../shared/SecondaryBtn'
+import { EmailBtn } from '../shared/SecondaryBtn'
 import { ContactFormStyled } from '../Styled/ContactUsStyled'
 
 const ContactForm = () => {
@@ -23,12 +23,13 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit}  action="POST" data-netlify='true'>
 				{submitted ? <div>Form Submitted</div> : ''}
 				<div>
 					<label htmlFor='name'>Name</label>
 					<input
 						id='name'
+						name='name'
 						type='text'
 						placeholder='Jane Appleseed'
 						value={values.name}
@@ -40,6 +41,7 @@ const ContactForm = () => {
 					<label htmlFor='email'>Email</label>
 					<input
 						id='email'
+						name='email'
 						type='email'
 						placeholder='email@example.com'
 						required
@@ -50,12 +52,14 @@ const ContactForm = () => {
 					<label htmlFor='message'>Message</label>
 					<textarea
 						id='message'
+						name='message'
 						placeholder='How can I help?'
 						required
 						onChange={handleChange}
 					></textarea>
+				<div data-netlify-recaptcha='true'></div>
 				</div>
-				<SecondaryButtonDark text={'send message'} />
+				<EmailBtn text={'send message'} type='submit'/>
 			</form>
 		</ContactFormStyled>
 	)

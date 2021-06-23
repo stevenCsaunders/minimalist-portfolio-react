@@ -1,4 +1,13 @@
-import { SecondaryBtnStyled, SecondaryBtnDarkStyled } from '../Styled/SecondaryBtnStyled'
+import { SecondaryBtnStyled, SecondaryBtnDarkStyled, EmailBtnStyled } from '../Styled/SecondaryBtnStyled'
+
+export const EmailBtn = ({ text }) => {
+
+	return (
+		<EmailBtnStyled>
+			{text}
+		</EmailBtnStyled>
+	)
+}
 
 export const SecondaryBtn = ({ text }) => {
 

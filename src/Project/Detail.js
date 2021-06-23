@@ -39,7 +39,8 @@ const Detail = () => {
 						},
 						alt
 					},
-				websiteUrl
+				websiteUrl,
+				githubUrl
 			}
 		`
 			)
@@ -80,15 +81,28 @@ const Detail = () => {
 							{detail.tech}
 						</p>
 					</div>
-					{detail.websiteUrl ? (
-						<a
-							href={detail.websiteUrl}
-							rel='noopener noreferrer'
-							target='_blank'
-						>
-							<SecondaryBtn text='Visit Website'></SecondaryBtn>
-						</a>
-					) : null}
+					<div className='external-links'>
+						{detail.websiteUrl ? (
+							<a
+								className='website-btn'
+								href={detail.websiteUrl}
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								<SecondaryBtn text='Visit Website'></SecondaryBtn>
+							</a>
+						) : null}
+						{detail.githubUrl ? (
+							<a
+								className='github-btn'
+								href={detail.githubUrl}
+								rel='noopener noreferrer'
+								target='_blank'
+							>
+								<SecondaryBtn text='Visit Repo'></SecondaryBtn>
+							</a>
+						) : null}
+					</div>
 				</aside>
 				<section className='project-background'>
 					<h3>Project Background</h3>

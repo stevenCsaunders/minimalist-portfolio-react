@@ -64,5 +64,10 @@ export default {
 			title: 'Website URL',
 			type: 'string',
 		},
+		{
+			name: 'githubUrl',
+			title: 'GitHub URL',
+			type: 'string',
+		},
 	],
 }

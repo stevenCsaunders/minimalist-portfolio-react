@@ -1,5 +1,27 @@
 import styled from 'styled-components'
 
+export const EmailBtnStyled = styled.button`
+	appearance: none;
+	background: var(--blue);
+	border: 1px solid var(--darkBlue);
+	color: var(--lightGrey);
+	padding: 15px 40px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-size: var(--textSmall);
+	transition: background 0.3s ease;
+	&:hover {
+		background: var(--lightGray);
+		color: var(--darkBlue);
+		cursor: pointer;
+	}
+
+	&:disabled,
+	&[disabled] {
+		opacity: 0.3;
+	}
+`
+
 export const SecondaryBtnStyled = styled.span`
 	appearance: none;
 	display: block;

@@ -23,6 +23,9 @@ export const ProjectStyled = styled.div`
 					margin: 0;
 				}
 			}
+			span:first-of-type{
+				margin-bottom: 2rem;
+			}
 		}
 	}
 	.project-background {
@@ -54,7 +57,7 @@ export const ProjectStyled = styled.div`
 					margin: 0;
 				}
 				.tech {
-					margin-bottom: 2rem;
+					margin-bottom: 4rem;
 					grid-row: 2 / 3;
 				}
 				span {
