@@ -8,7 +8,7 @@ export const TopNavStyled = styled.nav`
 	width: 100%;
 	height: var(--headerHeight);
 	.logoTop {
-		width: 30rem;
+		max-width: 30rem;
 	}
 `
 
