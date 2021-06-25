@@ -28,7 +28,7 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form onSubmit={handleSubmit} name='contact' method='post'>
+			<form name='contact' method='post'>
 			<input type="hidden" name="form-name" value="contact" />
 				<div>
 					<label htmlFor='name'>
@@ -72,7 +72,8 @@ const ContactForm = () => {
 					</label>
 					{submitted ? <div className='form-submit'>Form Submitted</div> : ''}
 				</div>
-				<EmailBtn text={'send message'} type='submit' />
+				<EmailBtn text={'send message'} type='submit' onClick={handleSubmit}
+				/>
 			</form>
 		</ContactFormStyled>
 	)
