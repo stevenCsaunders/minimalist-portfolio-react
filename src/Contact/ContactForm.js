@@ -11,23 +11,14 @@ const ContactForm = () => {
 
 	const [submitted, setSubmitted] = useState(false)
 
-	const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
-
 	const handleSubmit = e => {
-		fetch("/", {
-			method: "POST",
-			headers: { "Content-Type": "application/x-www-form-urlencoded" },
-			body: encode({ "form-name": "contact", ...values })
-		})
-			.then(() => alert("Success!"))
-			.catch(error => alert(error));
-
 		e.preventDefault();
 		setSubmitted(true);
+		setValues({
+			name: '',
+			email: '',
+			message: '',
+		})
 	};
 
 	const handleChange = (e) => {
@@ -37,8 +28,8 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form onSubmit={handleSubmit} netlify-honeypot="bot-field" data-netlify='true' name='contact' >
-			<input type="hidden" name="bot-field"/>
+			<form onSubmit={handleSubmit} name='contact' method='post'>
+			<input type="hidden" name="form-name" value="contact" />
 				<div>
 					<label htmlFor='name'>
 						Name
@@ -81,7 +72,6 @@ const ContactForm = () => {
 					</label>
 					{submitted ? <div className='form-submit'>Form Submitted</div> : ''}
 				</div>
-				<div data-netlify-recaptcha="true"></div>
 				<EmailBtn text={'send message'} type='submit' />
 			</form>
 		</ContactFormStyled>
