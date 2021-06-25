@@ -37,8 +37,8 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form onSubmit={handleSubmit}>
-			<input type="hidden" name="contact" value="contact" />
+			<form onSubmit={handleSubmit} netlify-honeypot="bot-field" data-netlify='true' name='contact' >
+			<input type="hidden" name="bot-field"/>
 				<div>
 					<label htmlFor='name'>
 						Name
@@ -81,6 +81,7 @@ const ContactForm = () => {
 					</label>
 					{submitted ? <div className='form-submit'>Form Submitted</div> : ''}
 				</div>
+				<div data-netlify-recaptcha="true"></div>
 				<EmailBtn text={'send message'} type='submit' />
 			</form>
 		</ContactFormStyled>
