@@ -57,7 +57,7 @@ const PortfolioItem = () => {
 							</Link>
 						</div>
 					</PortfolioItemStyled>
-				))}
+				)).reverse()}
 		</PortfolioWrapper>
 	)
 }
