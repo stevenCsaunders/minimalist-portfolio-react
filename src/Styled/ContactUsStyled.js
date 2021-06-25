@@ -39,7 +39,7 @@ export const ContactFormStyled = styled.section`
 			width: 100%;
 			margin-bottom: 2rem;
 			::placeholder {
-				font-size: var(--textSmall);
+				font-size: var(--textRegular);
 			}
 		}
 		textarea {
@@ -48,7 +48,7 @@ export const ContactFormStyled = styled.section`
 		}
 		label {
 			margin-bottom: 1rem;
-			font-size: var(--textSmall);
+			font-size: var(--textRegular);
 			font-weight: var(--textBold);
 		}
 	}
