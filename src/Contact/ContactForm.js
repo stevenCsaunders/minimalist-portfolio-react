@@ -11,10 +11,24 @@ const ContactForm = () => {
 
 	const [submitted, setSubmitted] = useState(false)
 
-	const handleSubmit = (e) => {
-		e.preventDefault()
-		setSubmitted(true)
-	}
+	const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
+	const handleSubmit = e => {
+		fetch("/", {
+			method: "POST",
+			headers: { "Content-Type": "application/x-www-form-urlencoded" },
+			body: encode({ "form-name": "contact", ...values })
+		})
+			.then(() => alert("Success!"))
+			.catch(error => alert(error));
+
+		e.preventDefault();
+		setSubmitted(true);
+	};
 
 	const handleChange = (e) => {
 		setValues({ ...values, [e.target.id]: e.target.value })
@@ -23,43 +37,51 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form onSubmit={handleSubmit}  action="POST" data-netlify='true'>
-				{submitted ? <div>Form Submitted</div> : ''}
+			<form onSubmit={handleSubmit}>
+			<input type="hidden" name="contact" value="contact" />
 				<div>
-					<label htmlFor='name'>Name</label>
-					<input
-						id='name'
-						name='name'
-						type='text'
-						placeholder='Jane Appleseed'
-						value={values.name}
-						required
-						onChange={handleChange}
-					/>
+					<label htmlFor='name'>
+						Name
+						<input
+							id='name'
+							name='name'
+							type='text'
+							placeholder='Jane Appleseed'
+							value={values.name}
+							required
+							onChange={handleChange}
+						/>
+					</label>
 				</div>
 				<div>
-					<label htmlFor='email'>Email</label>
-					<input
-						id='email'
-						name='email'
-						type='email'
-						placeholder='email@example.com'
-						required
-						onChange={handleChange}
-					/>
+					<label htmlFor='email'>
+						Email
+						<input
+							id='email'
+							name='email'
+							type='email'
+							placeholder='email@example.com'
+							value={values.email}
+							required
+							onChange={handleChange}
+						/>
+					</label>
 				</div>
 				<div>
-					<label htmlFor='message'>Message</label>
-					<textarea
-						id='message'
-						name='message'
-						placeholder='How can I help?'
-						required
-						onChange={handleChange}
-					></textarea>
-				<div data-netlify-recaptcha='true'></div>
+					<label htmlFor='message'>
+						Message
+						<textarea
+							id='message'
+							name='message'
+							placeholder='How can I help?'
+							value={values.message}
+							required
+							onChange={handleChange}
+						></textarea>
+					</label>
+					{submitted ? <div className='form-submit'>Form Submitted</div> : ''}
 				</div>
-				<EmailBtn text={'send message'} type='submit'/>
+				<EmailBtn text={'send message'} type='submit' />
 			</form>
 		</ContactFormStyled>
 	)
