@@ -7,7 +7,7 @@ const TopNav = ({ toggle, onClick }) => {
 	return (
 		<TopNavStyled>
 			<NavLink to='/'>
-				<img className='logoTop' src={logo} alt='logo' />
+				<img className='logoTop' src={logo} alt='logo' aria-label='logo' />
 			</NavLink>
 			<NavList toggle={toggle}>
 				<NavItem>
