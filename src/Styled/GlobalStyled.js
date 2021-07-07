@@ -217,6 +217,9 @@ export const GlobalStyled = createGlobalStyle`
   --red: #f43030;
   --black: #000000;
 
+  /* shadow */
+  --smallShadow: 10px -10px 10px -5px rgba(153,153,153,0.50);
+
   /* positioning*/
   --containerPadding: 10%;
   --headerHeight: 9.75rem;
