@@ -6,6 +6,10 @@ export const HomeHeroStyled = styled.section`
 		width: 100%;
 		margin-bottom: 2rem;
 	}
+.hero-header {
+	box-shadow: var(--smallShadow) ;
+}
+
 
 	@media (min-width: 768px) {
 		position: relative;

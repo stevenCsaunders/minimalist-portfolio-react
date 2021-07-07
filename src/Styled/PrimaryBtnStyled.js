@@ -7,6 +7,7 @@ export const PrimaryBtnStyled = styled.div`
 	grid-template-columns: 25% 1fr;
 	margin-top: 3rem;
 	border: none;
+	opacity: 1;
 	.arrow {
 		grid-area: 1 / 1 / 1 / 1;
 		background: var(--darkBlue);
