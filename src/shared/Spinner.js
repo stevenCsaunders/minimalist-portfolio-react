@@ -3,9 +3,9 @@ import SpinnerStyled from '../Styled/SpinnerStyled'
 const Spinner = () => {
 	return (
 		<SpinnerStyled>
-			<div class='ring'>
+			<div className='ring'>
 				Loading...
-				<div class="loader"></div>
+				<div className="loader"></div>
 			</div>
 		</SpinnerStyled>
 	)
