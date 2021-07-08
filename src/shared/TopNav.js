@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom'
 
 const TopNav = ({ toggle, onClick }) => {
 	return (
-		<TopNavStyled>
+		<TopNavStyled aria-label='top navigation'>
 			<NavLink to='/'>
-				<img className='logoTop' src={logo} alt='logo' aria-label='logo' />
+				<img className='logoTop' src={logo} alt='main logo' aria-label='logo' />
 			</NavLink>
 			<NavList toggle={toggle}>
 				<NavItem>
