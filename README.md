@@ -1,2 +1,0 @@
-
-Personal portfilio site.
