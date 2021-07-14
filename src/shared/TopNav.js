@@ -7,17 +7,28 @@ const TopNav = ({ toggle, onClick }) => {
 	return (
 		<TopNavStyled aria-label='top navigation'>
 			<NavLink to='/'>
-				<img className='logoTop' src={logo} alt='main logo' aria-label='logo' />
+				<img
+					className='logoTop'
+					src={logo}
+					alt='main logo'
+					aria-label='logo'
+				/>
 			</NavLink>
 			<NavList toggle={toggle}>
 				<NavItem>
-					<NavLink to='/'>Home</NavLink>
+					<NavLink to='/' onClick={onClick}>
+						Home
+					</NavLink>
 				</NavItem>
 				<NavItem>
-					<NavLink to='/portfolio'>Portfolio</NavLink>
+					<NavLink to='/portfolio' onClick={onClick}>
+						Portfolio
+					</NavLink>
 				</NavItem>
 				<NavItem>
-					<NavLink to='/contact'>Contact Me</NavLink>
+					<NavLink to='/contact' onClick={onClick}>
+						Contact Me
+					</NavLink>
 				</NavItem>
 			</NavList>
 			<Hamburger toggle={toggle} onClick={onClick} />

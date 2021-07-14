@@ -11,7 +11,8 @@ import { MainStyled } from './Styled/MainStyled'
 function App() {
 	const [hamburgerState, setHamburgerState] = useState(false)
 	const hamburgerHandler = () =>
-		!hamburgerState ? setHamburgerState(true) : setHamburgerState(false)
+		setHamburgerState(!hamburgerState)
+		
 
 	return (
 		<BrowserRouter>
