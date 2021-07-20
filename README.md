@@ -23,19 +23,5 @@ mpm start
 ```
 
 ## Installation and Setup
-To run this site locally, clone the repo and run 
-```
-npm install
-```
-Once all dependencies are installed and you'll need to navigate to the studio directory
-```
-cd studio
-```
-and then start Sanity using
-```
-sanity start
-```
-after Sanity starts, navigate back to the root directory and run
-```
-npm start
-```
+Because this is just a porfolio site, ther is no need to run this project locally. To see the site in it's current form, please visit http://www.stevesaunders.dev
+
