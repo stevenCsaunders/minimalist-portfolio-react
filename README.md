@@ -19,7 +19,7 @@ This site is continuously deployed using Netlify. A pre-production build is used
 sanity start
 ```
 ```
-mpm start
+npm start
 ```
 
 ## Installation and Setup
