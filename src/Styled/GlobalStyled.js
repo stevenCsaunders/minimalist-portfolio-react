@@ -218,7 +218,7 @@ export const GlobalStyled = createGlobalStyle`
   --black: #000000;
 
   /* shadow */
-  --smallShadow: 10px -10px 10px -5px rgba(153,153,153,0.50);
+  --smallShadow: 10px -10px 10px -5px rgba(153,153,153,0.25);
 
   /* positioning*/
   --containerPadding: 10%;
