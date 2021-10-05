@@ -24,7 +24,6 @@ const ContactForm = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault()
-	
 		const isValid = formValidation()
 		if (isValid) {
 			setSubmitted(true)
@@ -42,24 +41,39 @@ const ContactForm = () => {
 	}
 
 	//validation function here
-	const formValidation = () => {
+	function formValidation() {
+		const { name, email, message } = values
 		let formErrors = {}
 		let isValid = true
 		//name validation
-		if (!values.name) {
+		if (!name) {
 			formErrors.nameErr = 'You must enter a name'
 			isValid = false
-		} else if (values.name.length < 2) {
+		} else if (name.trim().length < 2) {
 			formErrors.nameErr = 'Name must contain at least two characters'
 			isValid = false
-		} else if(values.name.length > 50) {
+		} else if (name.trim().length > 50) {
 			formErrors.nameErr = 'Name must contain less than  50 characters'
 			isValid = false
 		}
 		//email validation
-
+		if (!email) {
+			formErrors.emailErr = 'You must enter an email address'
+			isValid = false
+		} else if (!/\S+@\S+\.\S+/.test(email)) {
+			formErrors.emailErr = 'You must enter a valid email address'
+			isValid = false
+		}
 		//message validation
-		
+		if (!message) {
+			formErrors.messageErr = 'You must enter a message'
+			isValid = false
+		} else if (message.trim().length < 2) {
+			formErrors.messageErr =
+				'Message must contain at least two characters'
+			isValid = false
+		}
+
 		setErrors(formErrors)
 		setSubmitted(false)
 		return isValid
@@ -87,7 +101,12 @@ const ContactForm = () => {
 					/>
 				</div>
 				<div>
-					<label htmlFor='email'>Email</label>
+					<label htmlFor='email'>
+						Email
+						{errors.emailErr && (
+							<span className='error-text'>{` - ${errors.emailErr}`}</span>
+						)}
+					</label>
 					<input
 						id='email'
 						name='email'
@@ -98,7 +117,12 @@ const ContactForm = () => {
 					/>
 				</div>
 				<div>
-					<label htmlFor='message'>Message</label>
+					<label htmlFor='message'>
+						Message
+						{errors.messageErr && (
+							<span className='error-text'>{` - ${errors.messageErr}`}</span>
+						)}
+					</label>
 					<textarea
 						id='message'
 						name='message'
