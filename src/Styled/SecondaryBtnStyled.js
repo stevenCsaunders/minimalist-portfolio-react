@@ -2,10 +2,11 @@ import styled from 'styled-components'
 
 export const EmailBtnStyled = styled.button`
 	appearance: none;
+	white-space: nowrap;
 	background: var(--blue);
 	border: 1px solid var(--darkBlue);
 	color: var(--lightGrey);
-	padding: 15px 40px;
+	padding: 1.5rem 2.5rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-size: var(--textSmall);
@@ -28,7 +29,7 @@ export const SecondaryBtnStyled = styled.span`
 	background: var(--lightGrey);
 	border: 1px solid var(--darkBlue);
 	color: var(--darkBlue);
-	padding: 15px 40px;
+	padding: 1.5rem 2.5rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	text-align: center;
@@ -51,7 +52,7 @@ export const SecondaryBtnDarkStyled = styled.span`
 	background: var(--blue);
 	border: none;
 	color: var(--lightGrey);
-	padding: 15px 40px;
+	padding: 1.5rem 2.5rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	font-size: var(--textSmall);
