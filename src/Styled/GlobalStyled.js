@@ -214,7 +214,7 @@ export const GlobalStyled = createGlobalStyle`
   --darkBlue: #33323d;
   --lightGrey: #fafafa;
   --grey: #eaeaeb;
-  --red: #f43030;
+  --red: #cd5c5c;
   --black: #000000;
 
   /* shadow */

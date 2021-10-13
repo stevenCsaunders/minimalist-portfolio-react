@@ -33,15 +33,18 @@ const ContactForm = () => {
 				message: '',
 			})
 			setErrors({
-				nameErr: '',
-				emailErr: '',
-				messageErr: '',
+				nameErr: null,
+				emailErr: null,
+				messageErr: null,
 			})
 		}
 	}
 
 	//validation function here
 	function formValidation() {
+		const emailRegExp =
+			/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
+
 		const { name, email, message } = values
 		let formErrors = {}
 		let isValid = true
@@ -60,7 +63,7 @@ const ContactForm = () => {
 		if (!email) {
 			formErrors.emailErr = 'You must enter an email address'
 			isValid = false
-		} else if (!/\S+@\S+\.\S+/.test(email)) {
+		} else if (!emailRegExp.test(email)) {
 			formErrors.emailErr = 'You must enter a valid email address'
 			isValid = false
 		}
@@ -82,7 +85,12 @@ const ContactForm = () => {
 	return (
 		<ContactFormStyled>
 			<h2>Contact Me</h2>
-			<form name='contact' method='post' onSubmit={handleSubmit}>
+			<form
+				name='contact'
+				method='post'
+				noValidate
+				onSubmit={handleSubmit}
+			>
 				<input type='hidden' name='form-name' value='contact' />
 				<div>
 					<label htmlFor='name'>
@@ -95,6 +103,9 @@ const ContactForm = () => {
 						id='name'
 						name='name'
 						type='text'
+						minLength='2'
+						maxLength='50'
+						required
 						placeholder='Jane Appleseed'
 						value={values.name}
 						onChange={handleChange}
@@ -111,6 +122,7 @@ const ContactForm = () => {
 						id='email'
 						name='email'
 						type='email'
+						required
 						placeholder='email@example.com'
 						value={values.email}
 						onChange={handleChange}
@@ -126,15 +138,19 @@ const ContactForm = () => {
 					<textarea
 						id='message'
 						name='message'
+						type='text'
+						minLength='3'
+						maxLength='500'
+						required
 						placeholder='How can I help?'
 						value={values.message}
 						onChange={handleChange}
 					></textarea>
-					{submitted && (
-						<div className='form-submit'>Form Submitted</div>
-					)}
 				</div>
-				<EmailBtn text={'send message'} type='submit' />
+				<div className='form-submit'>
+					<EmailBtn text={'send message'} type='submit' />
+					{submitted && <span className='submit-success'>Form Submitted</span>}
+				</div>
 			</form>
 		</ContactFormStyled>
 	)
